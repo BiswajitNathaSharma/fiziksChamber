@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Vithkuqi:wght@500&family=Roboto+Mono:ital,wght@0,700;1,600;1,700&family=Ubuntu:ital,wght@1,500&display=swap');
+
+* {
+    padding: 0%;
+    margin: 0%;
+    font-family: 'Noto Sans Vithkuqi', sans-serif;
+    font-family: 'Roboto Mono', monospace;
+    font-family: 'Ubuntu', sans-serif;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --bg-color: #1f242d;
+    --second-bg-color: #323946;
+    --text-color: white;
+    --main-color: aqua;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+section {
+    min-height: 100vh;
+    padding: 12rem 9% 2rem;
+}
+
+.header {
+    position: fixed;
+    margin-top:0;
+    left: 0;
+    padding: 2rem 8%;
+    width: 100%;
+    background: var(--bg-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo {
+    font-weight: 700;
+    color: var(--text-color);
+    font-size: 2.5rem;
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+}
+
+.nav-bar a {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: var(--text-color);
+    margin-left: 4rem;
+}
+
+.nav-bar a:hover,
+.nav-bar a.active {
+    color: var(--main-color);
+}
+
+#menu-icon:hover {
+    color: var(--main-color);
+}
+
+#menu-icon {
+    display: none;
+    font-size: 3.5rem;
+    color: var(--text-color);
+}
+
+.home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 45rem;
+}
+
+.left-section {
+    margin-left: 20px;
+}
+
+.left-section h1 {
+    font-size: 4.2rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.left-section p {
+    font-size: 1.9rem;
+    font-weight: 400;
+    margin-top: 16px;
+    letter-spacing: 1px;
+}
+
+.typing{
+    font-size: 3.2rem;
+    font-weight: 600;
+    color: var(--main-color);
+}
+
+.right-section{
+    bottom: 0;
+}
+
+.about{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30rem;
+}
+
+.about-left img{
+    height: 67vh;
+}
+.about-heading{
+    height:5rem ;
+    width: 100vw;
+    font-size: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.about-right h2{
+    font-size: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 17px;
+}
+
+.about-right p{
+    font-size: 1.8rem;
+    letter-spacing: 0.5px;
+    line-height: normal;
+}
+.left-section p span{
+    font-size: 1.9rem;
+    color: var(--main-color);
+}
