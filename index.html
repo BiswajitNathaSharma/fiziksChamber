@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FIZIKS CHAMBER</title>
+    <!-- mycss import  -->
+    <link rel="stylesheet" href="index.css">
+
+    <!-- boxicons import -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+    <header class="header">
+        <a class="logo">Fiziks Chamber</a>
+        <i class='bx bx-menu-alt-right bx-flashing' id="menu-icon"></i>
+        <nav class="nav-bar">
+            <a href="#" class="active">Home</a>
+            <a href="#about">About</a>
+            <a href="#courses">Courses</a>
+            <a href="#">Hall Of Frame</a>
+            <a href="#">Contact</a>
+        </nav>
+    </header>
+
+    <section class="home">
+        <div class="left-section">
+            <!-- section left side  -->
+            <h1>THIS COURSE IS </h1><br>
+            <span id="element" class="typing"> </span>
+            <p>"Unleash Your Physics Potential with Fiziks Chamber: <br> Where Curiosity Becomes Conquest!"</p>
+        </div>
+
+        <div class="right-section">
+            <!-- section right side  -->
+            <img src="./img/bg.png" alt="">
+        </div>
+    </section>
+    <div class="about-heading" id="about">ABOUT</div>
+    <section class="about" >
+        <div class="about-left">
+            <img src="./img/portfolio.png" alt="">
+        </div>
+        <div class="about-right">
+            <h2>Introducing Fiziks Chamber: <br> Igniting Brilliance in Physics Education</h2>
+            <p> &nbsp; &nbsp; In the fast-paced world of competitive exams like NEET and JEE, a solid foundation in physics is essential for success. Enter Fiziks Chamber, a groundbreaking physics tuition platform that is redefining the way students approach this critical subject. With a mission to nurture physics brilliance and pave the way for triumph, Fiziks Chamber stands as a beacon of innovation and excellence.</p>
+                <br> <br>
+            <p> &nbsp;  &nbsp; At Fiziks Chamber, physics is not just a subject but a journey of discovery. Students are equipped with the skills to not only understand complex concepts but also to apply them to real-world scenarios, fostering a deeper understanding.</p>
+                <br><br>
+            <p> &nbsp; &nbsp; One of the standout features of Fiziks Chamber is its commitment to personalized learning. Recognizing that every student has unique learning styles and paces, the platform provides interactive online sessions, doubt-solving forums, and personalized study plans. This tailored approach ensures that each student can unlock their full potential and gain the confidence needed to excel in these challenging exams.</p>
+                <br> <br>
+            <p> &nbsp; &nbsp; Fiziks Chamber's tagline "Empowering Futures through Physics Excellence" encapsulates its dedication to shaping the next generation of physicists and engineers. Say hello to a new era of physics education with Fiziks Chamber – where brilliance meets opportunity.</p>
+        </div>
+    </section>
+    <div class="course-heading" id="courses">COURSES</div>
+    <section class="courses">
+        <div class="course-container">
+            <div class="course-box">
+                <i class='bx bx-atom'></i>
+                <h3>Quantum mechanics</h3>
+                <p>Quantum Mechanics: Unveiling the Mysteries of the Subatomic World</p>
+                <a href="#" class="btn">Read More</a>
+            </div>
+            
+            <div class="course-box">
+                <i class="fa-solid fa-radiation"></i>
+                <h3>Nuclear physics</h3>
+                <p>Nuclear Physics: Unveiling the Mysteries of the Atomic Nucleus</p>
+                <a href="#" class="btn">Read More</a>
+            </div>
+            
+            <div class="course-box">
+                <i class='bx bx-test-tube' ></i>
+                <h3>Thermodynamics</h3>
+                <p>Thermodynamics: Unveiling the Mysteries of Energy and Matter Interplay</p>
+                <a href="#" class="btn">Read More</a>
+            </div>
+            
+            <div class="course-box">
+                <i class='bx bx-cog'></i>
+                <h3>Mechanics</h3>
+                <p>Mechanics: Unveiling the Fundamental Laws that Move the World</p>
+                <a href="#" class="btn">Read More</a>
+            </div>
+            
+            <div class="course-box">
+                <i class='bx bx-magnet' ></i>
+                <h3>Electro Magnet</h3>
+                <p>The Electromagnet: Powering Progress through Controlled Attraction</p>
+                <a href="#" class="btn">Read More</a>
+            </div>
+            
+            <div class="course-box">
+                <i class="fa-solid fa-eye"></i>
+                <h3>Optics</h3>
+                <p>Exploring the World of Optics: Illuminating the Path of Light and Vision</p>
+                <a href="#" class="btn">Read More</a>
+            </div>
+            
+        </div>
+    </section>
+
+    <!-- Load library from the CDN -->
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <!-- Setup and start animation! -->
+    <script>
+        var typed = new Typed('#element', {
+            strings: ['AFFORDABLE', 'PRACTICAL', 'EASY', 'UNDERSTANDABLE'],
+            typeSpeed: 100,
+            backspace: 180,
+            loop: true
+        });
+    </script>
+    <script src="https://kit.fontawesome.com/2e79f70891.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
