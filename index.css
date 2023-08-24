@@ -36,7 +36,7 @@ section {
 
 .header {
     position: fixed;
-    margin-top:0;
+    margin-top: 0;
     left: 0;
     padding: 2rem 8%;
     width: 100%;
@@ -104,29 +104,30 @@ a {
     letter-spacing: 1px;
 }
 
-.typing{
-    font-size: 3.2rem;
-    font-weight: 600;
+.typing {
+    font-size: 3.5rem;
+    font-weight: 800;
     color: var(--main-color);
 }
 
-.right-section{
+.right-section {
     bottom: 0;
 }
 
-.about{
+.about {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 30rem;
 }
 
-.about-left img{
+.about-left img {
     height: 67vh;
 }
-.about-heading, .course-heading{
+
+.page-band {
     padding-top: 8rem;
-    height:3rem ;
+    height: 3rem;
     width: 100vw;
     font-size: 4rem;
     display: flex;
@@ -134,7 +135,11 @@ a {
     justify-content: center;
 }
 
-.about-right h2{
+.page-band span {
+    color: var(--main-color);
+}
+
+.about-right h2 {
     font-size: 3rem;
     display: flex;
     justify-content: center;
@@ -147,16 +152,17 @@ a {
     letter-spacing: 0.5px;
     line-height: normal;
 }
-.left-section p span{
+
+.left-section p span {
     font-size: 1.9rem;
     color: var(--main-color);
 }
 
-.courses h3{
+.courses h3 {
     margin-bottom: 3rem;
 }
 
-.course-container{
+.course-container {
     display: flex;
     flex-wrap: wrap;
     gap: 3rem;
@@ -164,80 +170,97 @@ a {
     text-align: center;
     transition: .5s ease;
 }
-.course-container .course-box:hover{
+
+.course-container .course-box:hover {
     border-color: var(--main-color);
     transform: scale(1.02);
 }
-.course-container .course-box{
+
+.course-container .course-box {
     flex: 1 1 30rem;
     background-color: var(--second-bg-color);
     padding: 3rem 2rem 4rem;
     align-items: center;
-    border-radius: 1.5rem ;
+    border-radius: 1.5rem;
     border: 0.2rem solid var(--bg-color);
 }
-.course-box i{
+
+.course-box i {
     font-size: 6rem;
     color: var(--main-color);
 }
-.course-box h3{
+
+.course-box h3 {
     font-size: 2.4rem;
 }
-.course-box p{
+
+.course-box p {
     font-size: 1.6rem;
     margin: 1rem 0 3rem;
 }
-.card-image{
+
+.card-image {
     position: relative;
     height: 150px;
     width: 150px;
-    border-radius:50%;
+    border-radius: 50%;
     padding: 3px;
 }
-.card-image .card-img{
+
+.card-image .card-img {
     height: 100;
     width: 100%;
     object-fit: cover;
-    border-radius:50%;
+    border-radius: 50%;
     border: 2px solid var(--main-color);
-}   
-.frames{
+}
+
+.frames {
     min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    
+
 }
-.card{
+
+.card {
     border-radius: 25px;
     background-color: var(--second-bg-color);
     width: 320px;
     text-align: center;
 }
-.slide-content{
+
+.slide-content {
     margin: 0 40px;
 }
-.image-content{
+
+.image-content {
     row-gap: 6px;
     position: relative;
 }
+
 .image-content,
-.card-content{
+.card-content {
     flex-direction: column;
     align-items: center;
     display: flex;
-    padding: px 10px;
+    padding: 0px 10px;
 }
-.name{
+
+.name {
     font-size: 2rem;
     font-weight: 500;
     color: var(--text-color);
 }
-.description{
+
+.description {
     font-size: 1.3rem;
     text-align: center;
 }
-.button{
+
+.button,
+.btn {
+    color: var(--bg-color);
     border: none;
     font-size: 1.3rem;
     padding: 8px 15px;
@@ -247,20 +270,132 @@ a {
     cursor: pointer;
     transition: all 0.3s ease;
 }
-.button:hover{
-    background: transparent;
-    color: var(--text-color);
+
+.button:hover,
+.btn:hover {
+    box-shadow: 0 0 .9rem var(--main-color);
+
 }
-.overlay{
+
+.overlay {
     height: 100%;
     width: 100%;
     position: absolute;
     background-color: var(--main-color);
-    border-radius: 25px 25px 0 25px ;
+    border-radius: 25px 25px 0 25px;
 }
-.slide-container{
+
+.slide-container {
     max-width: 1120px;
     width: 100%;
-    background-color: gray;
     padding: 40px;
+}
+
+swiper-container {
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+swiper-slide {
+    background-position: center;
+    background-size: cover;
+    width: 300px;
+    height: 300px;
+}
+
+swiper-slide img {
+    display: block;
+    width: 100%;
+}
+
+
+.contact form {
+    max-width: 75rem;
+    margin: 1rem auto;
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+.contact form .input-box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.contact form .input-box input,
+.contact form textarea {
+    width: 100%;
+    padding: 1.5rem;
+    font-size: 1.6rem;
+    color: var(--text-color);
+    background-color: var(--second-bg-color);
+    margin: .8rem 0;
+    border-radius: .9rem;
+    resize: none;
+}
+
+.contact form .input-box input {
+    margin-right: 4px;
+    width: 49%;
+}
+
+.contact form .btn a {
+    text-decoration: none;
+    color: var(--bg-color);
+}
+
+.contact form .btn {
+    margin-top: 4rem;
+    padding: 10px 10px;
+    font-size: 15px;
+}
+
+.contact form h3 span {
+    color: var(--main-color);
+}
+
+.contact form h3 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+div .body {
+
+    background-color: red;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    width: 100%;
+    background-color: var(--main-color);
+    min-height: 100px;
+    padding: 20px 50px;
+}
+
+footer .footer-logo {
+    margin-top: 2.7rem;
+    color: var(--bg-color);
+    font-size: 3rem;
+}
+
+footer .social-icons {
+    display: flex;
+    font-size: 4rem;
+    color: var(--bg-color);
+
+}
+
+footer .social-icons li {
+    list-style: none;
+    margin: 1.5rem 1rem;
+    color: var(--bg-color);
+}
+
+footer .social-icons a {
+    text-decoration: none;
+    cursor: pointer;
+    color: var(--bg-color);
 }

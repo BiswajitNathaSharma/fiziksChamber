@@ -1,7 +1,7 @@
-var options={
-    string:['AFFORDABLE','EASY', 'PRACTICAL', 'UNDERSTANDABLE'],
-    typespeed: 70,
-    backspace: 70,
-    loop:true
-};
-var typed= new Typed('.typing',options);
+var typed = new Typed("#element", {
+    strings: ["AFFORDABLE", "PRACTICAL", "EASY", "UNDERSTANDABLE"],
+    typeSpeed: 100,
+    backspace: 100,
+    loop: true,
+  });
+

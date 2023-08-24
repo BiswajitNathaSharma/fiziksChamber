@@ -13,9 +13,9 @@
       rel="stylesheet"
     />
     <link
-  rel="stylesheet"
-  href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
-/>
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+    />
   </head>
 
   <body>
@@ -26,15 +26,15 @@
         <a href="#" class="active">Home</a>
         <a href="#about">About</a>
         <a href="#courses">Courses</a>
-        <a href="#">Hall Of Frame</a>
-        <a href="#">Contact</a>
+        <a href="#hall-of-frames">Hall Of Frame</a>
+        <a href="#contact">Contact</a>
       </nav>
     </header>
 
     <section class="home">
       <div class="left-section">
         <!-- section left side  -->
-        <h1>THIS COURSE IS</h1>
+        <h1>WE MAKE COURSES</h1>
         <br />
         <span id="element" class="typing"> </span>
         <p>
@@ -48,7 +48,9 @@
         <img src="./img/bg.png" alt="" />
       </div>
     </section>
-    <div class="about-heading" id="about">ABOUT</div>
+
+    <div class="page-band" id="about">ABOUT<span>&nbsp;US</span></div>
+
     <section class="about">
       <div class="about-left">
         <img src="./img/portfolio.png" alt="" />
@@ -95,7 +97,9 @@
         </p>
       </div>
     </section>
-    <div class="course-heading" id="courses">COURSES</div>
+
+    <div class="page-band" id="courses"><span>OUR&nbsp;</span> COURSES</div>
+
     <section class="courses">
       <div class="course-container">
         <div class="course-box">
@@ -104,14 +108,14 @@
           <p>
             Quantum Mechanics: Unveiling the Mysteries of the Subatomic World
           </p>
-          <a href="#" class="btn">Read More</a>
+          <a href="" class="btn">Read More</a>
         </div>
 
         <div class="course-box">
           <i class="fa-solid fa-radiation"></i>
           <h3>Nuclear physics</h3>
           <p>Nuclear Physics: Unveiling the Mysteries of the Atomic Nucleus</p>
-          <a href="#" class="btn">Read More</a>
+          <a href="" class="btn">Read More</a>
         </div>
 
         <div class="course-box">
@@ -121,14 +125,14 @@
             Thermodynamics: Unveiling the Mysteries of Energy and Matter
             Interplay
           </p>
-          <a href="#" class="btn">Read More</a>
+          <a href=" " class="btn">Read More</a>
         </div>
 
         <div class="course-box">
           <i class="bx bx-cog"></i>
           <h3>Mechanics</h3>
           <p>Mechanics: Unveiling the Fundamental Laws that Move the World</p>
-          <a href="#" class="btn">Read More</a>
+          <a href=" " class="btn">Read More</a>
         </div>
 
         <div class="course-box">
@@ -137,7 +141,7 @@
           <p>
             The Electromagnet: Powering Progress through Controlled Attraction
           </p>
-          <a href="#" class="btn">Read More</a>
+          <a href=" " class="btn">Read More</a>
         </div>
 
         <div class="course-box">
@@ -147,46 +151,274 @@
             Exploring the World of Optics: Illuminating the Path of Light and
             Vision
           </p>
-          <a href="#" class="btn">Read More</a>
+          <a href=" " class="btn">Read More</a>
         </div>
       </div>
     </section>
+
+    <div class="page-band" id="hall-of-frames">
+      HALL OF<span>&nbsp; FRAMES</span>
+    </div>
+
     <section class="frames">
       <div class="slide-container">
         <div class="slide-content">
-          <div class="card-wrapper">
-            <div class="card">
-              <div class="image-content"><span class="overlay"></span>
-                <div class="card-image"><img src="./img/pic-1.png" alt="user1" class="card-img"></div>
-            </div>
-            <div class="card-contrnt">
-                <h2 class="name">David Dell</h2>
-                <p class="description">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit mollitia tempore provident possimus repellendus nobis iste.</p>
-                <button class="button">View More</button>
-            </div>
-            </div>
+          <div class="card-wrapperr">
+            <swiper-container
+              class="mySwiper"
+              pagination="true"
+              effect="coverflow"
+              grab-cursor="true"
+              centered-slides="true"
+              slides-per-view="auto"
+              coverflow-effect-rotate="50"
+              coverflow-effect-stretch="0"
+              coverflow-effect-depth="100"
+              coverflow-effect-modifier="1"
+              coverflow-effect-slide-shadows="true"
+            >
+              <swiper-slide>
+                <div class="card">
+                  <div class="image-content">
+                    <span class="overlay"></span>
+                    <div class="card-image">
+                      <img src="./img/pic-1.png" alt="user1" class="card-img" />
+                    </div>
+                  </div>
+                  <div class="card-content">
+                    <h2 class="name">David Dell</h2>
+                    <p class="description">
+                      Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                      Sit mollitia tempore provident possimus repellendus nobis
+                      iste.
+                    </p>
+                    <button class="button">View More</button>
+                  </div>
+                </div>
+              </swiper-slide>
+              <swiper-slide>
+                <div class="card">
+                  <div class="image-content">
+                    <span class="overlay"></span>
+                    <div class="card-image">
+                      <img src="./img/pic-2.png" alt="user1" class="card-img" />
+                    </div>
+                  </div>
+                  <div class="card-content">
+                    <h2 class="name">Alex Pro</h2>
+                    <p class="description">
+                      Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                      Sit mollitia tempore provident possimus repellendus nobis
+                      iste.
+                    </p>
+                    <button class="button">View More</button>
+                  </div>
+                </div></swiper-slide
+              >
+              <swiper-slide>
+                <div class="card">
+                  <div class="image-content">
+                    <span class="overlay"></span>
+                    <div class="card-image">
+                      <img src="./img/pic-3.png" alt="user1" class="card-img" />
+                    </div>
+                  </div>
+                  <div class="card-content">
+                    <h2 class="name">Tom Harry</h2>
+                    <p class="description">
+                      Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                      Sit mollitia tempore provident possimus repellendus nobis
+                      iste.
+                    </p>
+                    <button class="button">View More</button>
+                  </div>
+                </div>
+              </swiper-slide>
+              <swiper-slide>
+                <div class="card">
+                  <div class="image-content">
+                    <span class="overlay"></span>
+                    <div class="card-image">
+                      <img src="./img/pic-4.png" alt="user1" class="card-img" />
+                    </div>
+                  </div>
+                  <div class="card-content">
+                    <h2 class="name">Michel</h2>
+                    <p class="description">
+                      Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                      Sit mollitia tempore provident possimus repellendus nobis
+                      iste.
+                    </p>
+                    <button class="button">View More</button>
+                  </div>
+                </div></swiper-slide
+              >
+              <swiper-slide>
+                <div class="card">
+                  <div class="image-content">
+                    <span class="overlay"></span>
+                    <div class="card-image">
+                      <img src="./img/pic-5.png" alt="user1" class="card-img" />
+                    </div>
+                  </div>
+                  <div class="card-content">
+                    <h2 class="name">Rocky</h2>
+                    <p class="description">
+                      Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                      Sit mollitia tempore provident possimus repellendus nobis
+                      iste.
+                    </p>
+                    <button class="button">View More</button>
+                  </div>
+                </div></swiper-slide
+              >
+              <swiper-slide>
+                <div class="card">
+                  <div class="image-content">
+                    <span class="overlay"></span>
+                    <div class="card-image">
+                      <img src="./img/pic-6.png" alt="user1" class="card-img" />
+                    </div>
+                  </div>
+                  <div class="card-content">
+                    <h2 class="name">Robert</h2>
+                    <p class="description">
+                      Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                      Sit mollitia tempore provident possimus repellendus nobis
+                      iste.
+                    </p>
+                    <button class="button">View More</button>
+                  </div>
+                </div></swiper-slide
+              >
+              <swiper-slide>
+                <div class="card">
+                  <div class="image-content">
+                    <span class="overlay"></span>
+                    <div class="card-image">
+                      <img src="./img/pic-7.png" alt="user1" class="card-img" />
+                    </div>
+                  </div>
+                  <div class="card-content">
+                    <h2 class="name">John</h2>
+                    <p class="description">
+                      Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                      Sit mollitia tempore provident possimus repellendus nobis
+                      iste.
+                    </p>
+                    <button class="button">View More</button>
+                  </div>
+                </div></swiper-slide
+              >
+              <swiper-slide>
+                <div class="card">
+                  <div class="image-content">
+                    <span class="overlay"></span>
+                    <div class="card-image">
+                      <img src="./img/pic-8.png" alt="user1" class="card-img" />
+                    </div>
+                  </div>
+                  <div class="card-content">
+                    <h2 class="name">Mosk</h2>
+                    <p class="description">
+                      Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                      Sit mollitia tempore provident possimus repellendus nobis
+                      iste.
+                    </p>
+                    <button class="button">View More</button>
+                  </div>
+                </div></swiper-slide
+              >
+              <swiper-slide>
+                <div class="card">
+                  <div class="image-content">
+                    <span class="overlay"></span>
+                    <div class="card-image">
+                      <img src="./img/pic-9.png" alt="user1" class="card-img" />
+                    </div>
+                  </div>
+                  <div class="card-content">
+                    <h2 class="name">Hitesh</h2>
+                    <p class="description">
+                      Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                      Sit mollitia tempore provident possimus repellendus nobis
+                      iste.
+                    </p>
+                    <button class="button">View More</button>
+                  </div>
+                </div></swiper-slide
+              >
+            </swiper-container>
           </div>
         </div>
       </div>
     </section>
 
+    <div class="page-band" id="contact">CONTACT<span>&nbsp;US</span></div>
+
+    <section class="contact">
+      <form>
+        <h3>GET IN <span>TOUCH</span></h3>
+        <div class="input-box">
+          <input type="text" id="name" placeholder="Full Name" required />
+          <input type="email" id="email" placeholder="Email address" required />
+        </div>
+        <div class="input-box">
+          <input
+            type="number"
+            id="number"
+            placeholder="Phone Number"
+            required
+          />
+          <input type="text" placeholder="subject" />
+        </div>
+        <textarea
+          name=""
+          id="message"
+          cols="30"
+          rows="8"
+          placeholder="Your Message"
+          required
+        ></textarea>
+        <input type="submit" value="Send Message" class="btn" />
+        <button class="btn"><a href="#">Location</a></button>
+      </form>
+    </section>
+
+    <footer>
+      <a class="logo footer-logo">Fiziks Chamber</a>
+
+      <ul class="social-icons">
+        <li>
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        </li>
+        <li>
+          <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+        </li>
+        <li>
+          <a href="#"><i class="fa-brands fa-threads"></i></a>
+        </li>
+        <li>
+          <a href="#"><i class="fa-brands fa-telegram"></i></a>
+        </li>
+        <li>
+          <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+        </li>
+        <li>
+          <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+        </li>
+      </ul>
+    </footer>
+
     <!-- Load library from the CDN -->
     <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
     <!-- Setup and start animation! -->
-    <script>
-      var typed = new Typed("#element", {
-        strings: ["AFFORDABLE", "PRACTICAL", "EASY", "UNDERSTANDABLE"],
-        typeSpeed: 100,
-        backspace: 180,
-        loop: true,
-      });
-    </script>
+    <script src="./index.js"></script>
     <!-- font osm -->
     <script
       src="https://kit.fontawesome.com/2e79f70891.js"
       crossorigin="anonymous"
     ></script>
-    <!-- swipre -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-element-bundle.min.js"></script>
   </body>
 </html>
