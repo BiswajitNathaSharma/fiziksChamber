@@ -31,7 +31,7 @@ body {
 
 section {
     min-height: 100vh;
-    padding: 12rem 9% 2rem;
+    padding: 9rem 8% 1rem;
 }
 
 .header {
@@ -80,6 +80,10 @@ a {
     color: var(--text-color);
 }
 
+span{
+    color: var(--main-color);
+}
+
 .home {
     display: flex;
     justify-content: center;
@@ -118,7 +122,7 @@ a {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 30rem;
+    gap: 3rem;
 }
 
 .about-left img {
@@ -140,7 +144,7 @@ a {
 }
 
 .about-right h2 {
-    font-size: 3rem;
+    font-size: 2.8rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -286,7 +290,7 @@ a {
 }
 
 .slide-container {
-    max-width: 1120px;
+    max-width: 1420px;
     width: 100%;
     padding: 40px;
 }
@@ -360,42 +364,114 @@ swiper-slide img {
     margin-bottom: 2rem;
 }
 
-div .body {
-
-    background-color: red;
-}
-
 footer {
     display: flex;
     justify-content: space-between;
     position: relative;
     width: 100%;
-    background-color: var(--main-color);
+    background-color: #3586ff;
     min-height: 100px;
     padding: 20px 50px;
+    margin-top: 2%;
 }
 
-footer .footer-logo {
-    margin-top: 2.7rem;
+footer .footer-logo a{
     color: var(--bg-color);
-    font-size: 3rem;
 }
-
+footer .footer-logo{
+    margin-top: 1.9rem;
+    font-size: 3rem;
+    text-align: center;
+}
+footer .footer-logo p{
+    font-size: 15px;
+    color: var(--bg-color);
+}
 footer .social-icons {
     display: flex;
     font-size: 4rem;
-    color: var(--bg-color);
-
+    margin-left: 50rem;
 }
 
 footer .social-icons li {
     list-style: none;
     margin: 1.5rem 1rem;
-    color: var(--bg-color);
+    
 }
 
-footer .social-icons a {
+footer .social-icons li a {
     text-decoration: none;
+    display: inline-block;
     cursor: pointer;
     color: var(--bg-color);
+    transition: 0.5s;
+}
+
+footer .social-icons li a:hover{
+    transform: translateY(-9px);
+}
+footer .wave{
+    position: absolute;
+    top: -100px;
+    left: 0px;
+    width: 100%;
+    height: 100px;
+    background: url(./img/wave.png);
+    background-size: 1000px 100px;
+}
+footer .wave#wave1{
+    z-index: 1000;
+    opacity: .9;
+    bottom: 0;
+    animation: animateWave 4s linear infinite;
+}
+@keyframes animateWave {
+    0%{
+        background-position-x:1000px ;
+    }
+    100%{
+        background-position-x: 0px;
+    }
+}
+footer .wave#wave2{
+    z-index: 999;
+    opacity: 0.7;
+    bottom: 0;
+    animation: animateWave-2 4s linear infinite;
+}
+@keyframes animateWave-2 {
+    0%{
+        background-position-x: 0;
+    }
+    100%{
+        background-position-x: 1000px;
+    }
+}
+footer .wave#wave3{
+    z-index: 800;
+    opacity: 0.4;
+    bottom: 100px;
+    animation: animateWave-3 6s linear infinite;
+}
+@keyframes animateWave-3 {
+    0%{
+        background-position-x: 1000px;
+    }
+    100%{
+        background-position-x: 0px;
+    }
+}
+footer .wave#wave4{
+    z-index: 900;
+    opacity: 0.5;
+    bottom: 100px;
+    animation: animateWave-4 4s linear infinite;
+}
+@keyframes animateWave-4 {
+    0%{
+        background-position-x: 0;
+    }
+    100%{
+        background-position-x: 1000px;
+    }
 }

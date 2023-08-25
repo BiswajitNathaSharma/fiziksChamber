@@ -20,10 +20,10 @@
 
   <body>
     <header class="header">
-      <a class="logo">Fiziks Chamber</a>
+      <a href="#home" class="logo">Fiziks Chamber</a>
       <i class="bx bx-menu-alt-right bx-flashing" id="menu-icon"></i>
       <nav class="nav-bar">
-        <a href="#" class="active">Home</a>
+        <a href="#home" class="active">Home</a>
         <a href="#about">About</a>
         <a href="#courses">Courses</a>
         <a href="#hall-of-frames">Hall Of Frame</a>
@@ -31,7 +31,7 @@
       </nav>
     </header>
 
-    <section class="home">
+    <section id="home" class="home">
       <div class="left-section">
         <!-- section left side  -->
         <h1>WE MAKE COURSES</h1>
@@ -49,7 +49,7 @@
       </div>
     </section>
 
-    <div class="page-band" id="about">ABOUT<span>&nbsp;US</span></div>
+    <div class="page-band"  id="about">ABOUT<span>&nbsp;US</span></div>
 
     <section class="about">
       <div class="about-left">
@@ -57,9 +57,9 @@
       </div>
       <div class="about-right">
         <h2>
-          Introducing Fiziks Chamber: <br />
-          Igniting Brilliance in Physics Education
+          Introducing &nbsp; <span>Fiziks Chamber</span> &nbsp;: Igniting Brilliance in Physics Education
         </h2>
+        <br>
         <p>
           &nbsp; &nbsp; In the fast-paced world of competitive exams like NEET
           and JEE, a solid foundation in physics is essential for success. Enter
@@ -386,9 +386,20 @@
     </section>
 
     <footer>
-      <a class="logo footer-logo">Fiziks Chamber</a>
-
+      <div class="waves">
+        <div class="wave" id="wave1"></div>
+        <div class="wave" id="wave2"></div>
+        <div class="wave" id="wave3"></div>
+        <div class="wave" id="wave4"></div>
+      </div>
+      <div class="logo footer-logo">
+        <a href="#home" >Fiziks Chamber</a>
+        <p>"Empowering Futures through Physics Excellence"</p>
+      </div>
       <ul class="social-icons">
+        <li>
+          <a href="#home"><i class="fa-solid fa-arrow-up-from-bracket fa-bounce"></i></a>
+        </li>
         <li>
           <a href="#"><i class="fa-brands fa-instagram"></i></a>
         </li>
