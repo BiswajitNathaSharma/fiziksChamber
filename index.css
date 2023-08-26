@@ -31,7 +31,7 @@ body {
 
 section {
     min-height: 100vh;
-    padding: 9rem 8% 1rem;
+    padding: 9rem 15% 1rem;
 }
 
 .header {
@@ -91,7 +91,7 @@ span{
 }
 
 .left-section {
-    margin-left: 20px;
+    margin-left: 10px;
 }
 
 .left-section h1 {
@@ -490,8 +490,9 @@ footer .wave#wave4{
     header{
         padding: 2rem 3%;
     }
-    section{
-        padding: 10rem 3% 2rem;
+    .home{
+        padding-left: 0rem;
+        padding-right: 0;
     }
     footer{
         padding: 2rem 3%;
@@ -593,6 +594,9 @@ footer .wave#wave4{
     }
 }
 @media (max-width: 637px){
+    .course-box{
+        grid-template-columns: repeat(2, 1fr);
+    }
     footer{
         display: flex;
         justify-content: center;
@@ -605,4 +609,25 @@ footer .wave#wave4{
         font-size: 20px;
         margin-left: 5px;
     }
+}
+@media (max-width: 991px){
+    .page-band{
+        font-size: 2.7rem;
+        margin-bottom: 1rem;
+    }
+    body{
+        margin: 0;
+        padding: 0;
+    }
+    header{
+        padding: 2rem 3%;
+    }
+    .about h2{
+        font-size: 2rem;
+        text-align: center;
+    }
+    .about p{
+        font-size: 1.5rem;
+    }
+
 }
