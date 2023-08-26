@@ -23,5 +23,18 @@ var typed = new Typed("#element", {
         });
       }
     });
+    menuicon.classList.remove('bx-x')
+    navbar.classList.remove('active')
+    
+
+  }
+
+  let menuicon = document.querySelector('#menu-icon')
+  let navbar = document.querySelector('.nav-bar')
+
+  menuicon.onclick =() =>{
+    menuicon.classList.toggle('bx-x')
+    navbar.classList.toggle('active')
+    
   }
 
