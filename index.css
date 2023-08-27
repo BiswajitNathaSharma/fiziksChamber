@@ -80,7 +80,7 @@ a {
     color: var(--text-color);
 }
 
-span{
+span {
     color: var(--main-color);
 }
 
@@ -115,6 +115,18 @@ span{
 
 .right-section {
     bottom: 0;
+    animation: floatImage 4s ease-in-out infinite;
+    
+}
+
+@keyframes floatImage{
+    0%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(-1.7rem);
+    }
+
 }
 
 .about {
@@ -129,6 +141,8 @@ span{
 
 .about-left img {
     height: 67vh;
+    animation: floatImage 4s ease-in-out infinite;
+    border-radius: 20%;
 }
 
 .page-band {
@@ -225,6 +239,8 @@ span{
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 9rem 0% 1rem;
+    min-height: auto;
 
 }
 
@@ -314,9 +330,10 @@ swiper-slide img {
     width: 100%;
 }
 
-.contact{
+.contact {
     margin-bottom: 50px;
 }
+
 .contact form {
     max-width: 75rem;
     margin: 1rem auto;
@@ -377,20 +394,23 @@ footer {
     margin-top: 2%;
 }
 
-footer .footer-logo a{
+footer .footer-logo a {
     color: var(--bg-color);
 }
-footer .footer-logo{
+
+footer .footer-logo {
     margin-top: 1.9rem;
     font-size: 3rem;
     text-align: center;
     position: absolute;
     margin-left: 1%;
 }
-footer .footer-logo p{
+
+footer .footer-logo p {
     font-size: 15px;
     color: var(--bg-color);
 }
+
 footer .social-icons {
     display: flex;
     font-size: 4rem;
@@ -399,7 +419,7 @@ footer .social-icons {
 footer .social-icons li {
     list-style: none;
     margin: 1.5rem 1rem;
-    
+
 }
 
 footer .social-icons li a {
@@ -410,102 +430,136 @@ footer .social-icons li a {
     transition: 0.5s;
 }
 
-footer .social-icons li a:hover{
+footer .social-icons li a:hover {
     transform: translateY(-9px);
 }
-footer .wave{
+
+footer .wave {
     position: absolute;
     top: -100px;
     left: 0px;
-   width:100%;
+    width: 100%;
     height: 100px;
     background: url(./img/wave.png);
-   
+
     background-size: cover;
 }
-footer .wave#wave1{
+
+footer .wave#wave1 {
     z-index: 1000;
     opacity: .9;
     bottom: 0;
     animation: animateWave 4s linear infinite;
 }
+
 @keyframes animateWave {
-    0%{
-        background-position-x:1000px ;
+    0% {
+        background-position-x: 1000px;
     }
-    100%{
+
+    100% {
         background-position-x: 0px;
     }
 }
-footer .wave#wave2{
+
+footer .wave#wave2 {
     z-index: 999;
     opacity: 0.7;
     bottom: 0;
     animation: animateWave-2 4s linear infinite;
 }
+
 @keyframes animateWave-2 {
-    0%{
+    0% {
         background-position-x: 0;
     }
-    100%{
+
+    100% {
         background-position-x: 1000px;
     }
 }
-footer .wave#wave3{
+
+footer .wave#wave3 {
     z-index: 800;
     opacity: 0.4;
     bottom: 100px;
     animation: animateWave-3 6s linear infinite;
 }
+
 @keyframes animateWave-3 {
-    0%{
+    0% {
         background-position-x: 1000px;
     }
-    100%{
+
+    100% {
         background-position-x: 0px;
     }
 }
-footer .wave#wave4{
+
+footer .wave#wave4 {
     z-index: 900;
     opacity: 0.5;
     bottom: 100px;
     animation: animateWave-4 4s linear infinite;
 }
+
 @keyframes animateWave-4 {
-    0%{
+    0% {
         background-position-x: 0;
     }
-    100%{
+
+    100% {
         background-position-x: 1000px;
     }
 }
 
 @media (max-width: 1200px) {
-    html{
+    html {
         font-size: 55%;
     }
 }
+
 @media (max-width: 991px) {
-    header{
+    header {
         padding: 2rem 3%;
     }
-    .home{
+
+    .home {
         padding-left: 0rem;
         padding-right: 0;
     }
-    footer{
+
+    footer {
         padding: 2rem 3%;
     }
-    .about-left img{
+
+    .about-left img {
         width: 32vw;
         height: 40vh;
     }
+
+    .page-band {
+        font-size: 2.7rem;
+        margin-bottom: 1rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    .about p {
+        font-size: 1.8rem;
+    }
+
 }
-@media (max-width: 770px){
-    #menu-icon{
+
+@media (max-width: 770px) {
+    #menu-icon {
         display: block;
     }
-    .nav-bar{
+
+    .nav-bar {
         position: absolute;
         top: 100%;
         left: 0;
@@ -513,101 +567,164 @@ footer .wave#wave4{
         padding: 1rem 3%;
         background: var(--bg-color);
         border-top: .1 solid rgba(0, 0, 0, .2);
-        box-shadow: 0 .5rem 1rem rgba(0, 0, 0,.2);
+        box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .2);
         display: none;
     }
-    .nav-bar.active{
+
+    .nav-bar.active {
         display: block;
-    }
-    .nav-bar a{
-        display: block;
-        font-size: 2rem;
-        margin: 3rem 0 ;
     }
 
-    footer .social-icons{
+    .nav-bar a {
+        display: block;
+        font-size: 2rem;
+        margin: 3rem 0;
+    }
+
+    footer .social-icons {
         font-size: 3rem;
     }
-    footer .footer-logo{
+
+    footer .footer-logo {
         position: absolute;
         margin-top: 0;
         padding-left: 0%;
     }
-    footer .footer-logo a{
+
+    footer .footer-logo a {
         font-size: 2rem;
     }
-    footer .footer-logo p{
+
+    footer .footer-logo p {
         font-size: 1.5rem;
     }
-    .about img{
-        width: 60vw;
+
+    .about img {
+        width: auto;
         height: 40vh;
         border-radius: 35%;
     }
-    .about{
+
+    .about {
         flex-direction: column-reverse;
     }
-    .about h2{
+
+    .about h2 {
         padding: 2rem 0rem;
         flex-direction: column-reverse;
     }
 }
-@media (max-width: 480px){
-    .home .left-section h1{
+
+@media (max-width: 480px) {
+    section {
+        margin-bottom: 6rem;
+    }
+
+    .home .left-section h1 {
         font-size: 2.5rem;
     }
-    .home .left-section .typing{
+
+    .home .left-section .typing {
         font-size: 2.3rem;
     }
-    .home .left-section p{
+
+    .home .left-section p {
         font-size: 1.8rem;
     }
-    .right-section img{
+
+    .right-section img {
         width: 70vw;
         border-radius: 30%;
     }
-    .about p{
+
+    .about p {
         font-size: 1.5rem;
     }
-    .about h2{
+
+    .about h2 {
         font-size: 2.5rem;
     }
-    section{
+
+    section {
         align-items: center;
     }
-    .frames ,.contact{
-        padding: 9rem 0% 1rem;
+
+    .courses {
+        padding: 9rem 12% 1rem;
     }
-    
 }
-@media (max-width: 580px){
+
+@media (max-width: 430px) {
+
+    html {
+        font-size: 50%;
+    }
+
+    .contact form .input-box input {
+        width: 100%;
+    }
+
+    .about img {
+        margin-top: 2px;
+        height: 230px;
+    }
+}
+
+@media (max-width: 580px) {
     .home {
         flex-direction: column-reverse;
-        justify-content:center;
+        justify-content: center;
         gap: 50px;
     }
+
     .left-section {
         margin-left: 10px;
     }
-    .home .left-section h1{
+
+    .home .left-section h1 {
         font-size: 2.5rem;
     }
-    .home .typing{
+
+    .home .typing {
         font-size: 1.9rem;
     }
-    .home p{
+
+    .home p {
         font-size: 1.6rem;
         letter-spacing: 0;
     }
-    footer{
+
+    footer {
         flex-direction: column;
     }
+
+    .frames {
+        padding: 9rem 0% 1rem;
+        min-height: auto;
+    }
+
+    .contact {
+        padding: 9rem 3% 1rem;
+        min-height: auto;
+        margin-bottom: 30%;
+    }
+
+    footer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        row-gap: 150px;
+        flex-direction: column;
+
+    }
 }
-@media (max-width: 637px){
-    .course-box{
+
+@media (max-width: 637px) {
+    .course-box {
         grid-template-columns: repeat(2, 1fr);
     }
-    footer{
+
+    footer {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -615,29 +732,9 @@ footer .wave#wave4{
         flex-direction: column;
         margin-top: 5%;
     }
-    footer .social-icons{
+
+    footer .social-icons {
         font-size: 20px;
         margin-left: 5px;
     }
-}
-@media (max-width: 991px){
-    .page-band{
-        font-size: 2.7rem;
-        margin-bottom: 1rem;
-    }
-    body{
-        margin: 0;
-        padding: 0;
-    }
-    header{
-        padding: 2rem 3%;
-    }
-    .about h2{
-        font-size: 2rem;
-        text-align: center;
-    }
-    .about p{
-        font-size: 1.8rem;
-    }
-
 }
