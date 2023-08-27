@@ -132,13 +132,14 @@ span{
 }
 
 .page-band {
-    padding-top: 5rem;
-    height: 3rem;
+    padding-top: 5%;
+    height: 4rem;
     width: 100vw;
     font-size: 4rem;
     display: flex;
     align-items: center;
     justify-content: center;
+    text-align: center;
 }
 
 .page-band span {
@@ -147,10 +148,8 @@ span{
 
 .about-right h2 {
     font-size: 2.8rem;
-    
     justify-content: center;
     align-items: center;
-    padding-bottom: 17px;
 }
 
 .about-right p {
@@ -222,7 +221,7 @@ span{
 }
 
 .frames {
-    min-height: 100vh;
+    min-height: 75vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -237,11 +236,11 @@ span{
 }
 
 .slide-content {
-    margin: 0 40px;
+    margin: 0 0;
 }
 
 .image-content {
-    row-gap: 6px;
+    row-gap: 3px;
     position: relative;
 }
 
@@ -299,8 +298,8 @@ span{
 
 swiper-container {
     width: 100%;
-    padding-top: 10px;
-    padding-bottom: 50px;
+    padding-top: 30px;
+    padding-bottom: 20px;
 }
 
 swiper-slide {
@@ -497,6 +496,10 @@ footer .wave#wave4{
     footer{
         padding: 2rem 3%;
     }
+    .about-left img{
+        width: 32vw;
+        height: 40vh;
+    }
 }
 @media (max-width: 770px){
     #menu-icon{
@@ -537,12 +540,11 @@ footer .wave#wave4{
         font-size: 1.5rem;
     }
     .about img{
-        width: 45vw;
+        width: 60vw;
         height: 40vh;
-        border-radius: 50%;
+        border-radius: 35%;
     }
     .about{
-        padding: 5rem 2.4rem;
         flex-direction: column-reverse;
     }
     .about h2{
@@ -552,35 +554,40 @@ footer .wave#wave4{
 }
 @media (max-width: 480px){
     .home .left-section h1{
-        font-size: 2.4rem;
+        font-size: 2.5rem;
     }
     .home .left-section .typing{
-        font-size: 2rem;
+        font-size: 2.3rem;
     }
     .home .left-section p{
-        font-size: 15px;
+        font-size: 1.8rem;
     }
     .right-section img{
-        width: 28vw;
+        width: 70vw;
         border-radius: 30%;
     }
     .about p{
-        font-size: 1.8rem;
+        font-size: 1.5rem;
     }
     .about h2{
-        font-size: 2.3rem;
+        font-size: 2.5rem;
     }
-    .slide-container {
-        padding: 0;
-        width: 143%;
+    section{
+        align-items: center;
     }
-    .frames{
-        padding: 0 0 0 0;
+    .frames ,.contact{
+        padding: 9rem 0% 1rem;
     }
+    
 }
-@media (max-width: 563px){
-    .right-section img{
-        width: 30vw;
+@media (max-width: 580px){
+    .home {
+        flex-direction: column-reverse;
+        justify-content:center;
+        gap: 50px;
+    }
+    .left-section {
+        margin-left: 10px;
     }
     .home .left-section h1{
         font-size: 2.5rem;
@@ -630,7 +637,7 @@ footer .wave#wave4{
         text-align: center;
     }
     .about p{
-        font-size: 1.5rem;
+        font-size: 1.8rem;
     }
 
 }
