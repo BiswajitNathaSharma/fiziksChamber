@@ -606,6 +606,7 @@ footer .wave#wave4 {
     }
 
     .about {
+        padding: 5% 5%;
         flex-direction: column-reverse;
     }
 
@@ -616,6 +617,9 @@ footer .wave#wave4 {
 }
 
 @media (max-width: 480px) {
+    .slide-container{
+        padding: 10px;
+    }
     section {
         margin-bottom: 6rem;
     }
@@ -637,8 +641,11 @@ footer .wave#wave4 {
         border-radius: 30%;
     }
 
+    .about {
+        padding: 5% 5%;
+    }
     .about p {
-        font-size: 1.5rem;
+        font-size: 1.7rem;
     }
 
     .about h2 {
@@ -699,7 +706,7 @@ footer .wave#wave4 {
     }
 
     .frames {
-        padding: 9rem 0% 1rem;
+        padding: 2rem 0% 0rem;
         min-height: auto;
     }
 
