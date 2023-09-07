@@ -180,10 +180,10 @@
               coverflow-effect-rotate="50"
               coverflow-effect-stretch="0"
               coverflow-effect-depth="100"
-              coverflow-effect-modifier="5"
+              coverflow-effect-modifier="1"
               coverflow-effect-slide-shadows="true"
-              autoplay-delay="2500"
-              autoplay-disable-on-interaction="true"
+              autoplay-delay="2000"
+              autoplay-disable-on-interaction="false"
             >
               <swiper-slide>
                 <div class="card">
@@ -365,7 +365,7 @@
     <div class="page-band" id="contact">CONTACT<span>&nbsp;US</span></div>
 
     <section class="contact">
-      <form>
+      <form id="form" onsubmit="return false">
         <h3>GET IN <span>TOUCH</span></h3>
         <div class="input-box">
           <input type="text" id="name" placeholder="Full Name" required />
@@ -378,7 +378,7 @@
             placeholder="Phone Number"
             required
           />
-          <input type="text" placeholder="subject" />
+          <input type="text" placeholder="subject" id="subject" />
         </div>
         <textarea
           name=""
@@ -388,9 +388,16 @@
           placeholder="Your Message"
           required
         ></textarea>
-        <input type="submit" value="Send Message" class="btn" />
-        <button class="btn"><a href="#">Location</a></button>
+        <input
+          type="submit"
+          id="submit"
+          value="Send Message"
+          class="btn"
+          onclick="sendmail()"
+        />
+        <button class="btn"><a target="_blank" href="https://goo.gl/maps/JiRSxASok7c7odBMA">Location</a></button>
       </form>
+      
     </section>
 
     <footer>
@@ -445,5 +452,27 @@
     ></script>
     <script src="https://unpkg.com/scrollreveal"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-element-bundle.min.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script>
+      let form = document.getElementById("form");
+      form.addEventListener("submit" , sendmail(event));
+      function sendmail() {
+        event.preventDefault()
+        let numbers = document.getElementById("number").value
+        let messages = document.getElementById("message").value
+        let subject = document.getElementById("subject").value
+        let email = document.getElementById("email").value
+        let body = `my email: ${email} <br>phone number: ${numbers} <br> message: ${messages}`
+        Email.send({
+          Host: "smtp.elasticemail.com",
+          Username: "sharmaoncourse@gmail.com",
+          Password: "B33D9F91BB922C2DC7D2B52C77A1E9BF2F68",
+          To: "lipubiswajit109@gmail.com",
+          From: "sharmaoncourse@gmail.com",
+          Subject: subject,
+          Body: body,
+        }).then((message) => alert(message));
+      }
+    </script>
   </body>
 </html>
