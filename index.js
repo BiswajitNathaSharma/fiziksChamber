@@ -1,4 +1,4 @@
-var typed = new typed("#element", {
+var typed = new Typed("#element", {
   strings: [
     "AFFORDABLE",
     "PRACTICAL",
@@ -11,7 +11,6 @@ var typed = new typed("#element", {
   backspace: 100,
   loop: true,
 });
-
 let sections = document.querySelectorAll("section");
 let navLinks = document.querySelectorAll("header nav a");
 

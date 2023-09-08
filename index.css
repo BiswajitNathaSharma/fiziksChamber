@@ -10,7 +10,6 @@
     border: none;
     outline: none;
     scroll-behavior: smooth;
-    overflow-x: hidden;
 }
 
 :root {
@@ -494,11 +493,11 @@ footer .wave#wave3 {
     background-color: var(--second-bg-color);
     border-radius: 7px;
     position: fixed;
-    top: 50%;
+    top: 0%;
     left: 50%;
-    transform: translate(-50%, -50%) scale(1);
+    transform: translate(-50%, -50%) scale(0.1);
     text-align: center;
-    visibility: visible;
+    visibility: hidden;
     padding: 0 30px 30px;
     transition: transform 0.4s, top 0.4s;
 }
