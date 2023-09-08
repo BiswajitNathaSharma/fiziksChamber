@@ -365,7 +365,7 @@
     <div class="page-band" id="contact">CONTACT<span>&nbsp;US</span></div>
 
     <section class="contact">
-      <form id="form" onsubmit="return false">
+      <form id="form" onsubmit="reset()">
         <h3>GET IN <span>TOUCH</span></h3>
         <div class="input-box">
           <input type="text" id="name" placeholder="Full Name" required />
@@ -388,18 +388,20 @@
           placeholder="Your Message"
           required
         ></textarea>
-        <input
-          type="submit"
-          id="submit"
-          value="Send Message"
-          class="btn"
-          onclick="sendmail()"
-        />
-        <button class="btn"><a target="_blank" href="https://goo.gl/maps/JiRSxASok7c7odBMA">Location</a></button>
+        <input type="submit" id="submit" value="Send Message" class="btn" />
+        <button class="btn">
+          <a target="_blank" href="https://goo.gl/maps/JiRSxASok7c7odBMA"
+            >Location</a
+          >
+        </button>
       </form>
-      
     </section>
-
+    <div class="popup" id="popup">
+      <img src="./img/tick.png" alt="tick png" />
+      <h2>Thank you!</h2>
+      <p>your message send successfully</p>
+      <button class="btn pop-btn" onclick="closePopup()">OK</button>
+    </div>
     <footer>
       <div class="waves">
         <div class="wave" id="wave1"></div>
@@ -455,14 +457,14 @@
     <script src="https://smtpjs.com/v3/smtp.js"></script>
     <script>
       let form = document.getElementById("form");
-      form.addEventListener("submit" , sendmail(event));
+      form.addEventListener("submit", sendmail);
       function sendmail() {
-        event.preventDefault()
-        let numbers = document.getElementById("number").value
-        let messages = document.getElementById("message").value
-        let subject = document.getElementById("subject").value
-        let email = document.getElementById("email").value
-        let body = `my email: ${email} <br>phone number: ${numbers} <br> message: ${messages}`
+        event.preventDefault();
+        let numbers = document.getElementById("number").value;
+        let messages = document.getElementById("message").value;
+        let subject = document.getElementById("subject").value;
+        let email = document.getElementById("email").value;
+        let body = `my email: ${email} <br>phone number: ${numbers} <br> message: ${messages}`;
         Email.send({
           Host: "smtp.elasticemail.com",
           Username: "sharmaoncourse@gmail.com",
@@ -471,7 +473,17 @@
           From: "sharmaoncourse@gmail.com",
           Subject: subject,
           Body: body,
-        }).then((message) => alert(message));
+        }).then(openPopup());
+      }
+    </script>
+    <script>
+      //popup
+      let popup = document.getElementById("popup");
+      function openPopup() {
+        popup.classList.add("open-popup");
+      }
+      function closePopup() {
+        popup.classList.remove("open-popup");
       }
     </script>
   </body>

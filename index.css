@@ -10,6 +10,7 @@
     border: none;
     outline: none;
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 :root {
@@ -116,14 +117,15 @@ span {
 .right-section {
     bottom: 0;
     animation: floatImage 4s ease-in-out infinite;
-    
+
 }
 
-@keyframes floatImage{
-    0%{
+@keyframes floatImage {
+    0% {
         transform: translateY(0);
     }
-    50%{
+
+    50% {
         transform: translateY(-1.7rem);
     }
 
@@ -486,6 +488,51 @@ footer .wave#wave3 {
     animation: animateWave-3 6s linear infinite;
 }
 
+
+.popup {
+    width: 400px;
+    background-color: var(--second-bg-color);
+    border-radius: 7px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1);
+    text-align: center;
+    visibility: visible;
+    padding: 0 30px 30px;
+    transition: transform 0.4s, top 0.4s;
+}
+
+.open-popup {
+    visibility: visible;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.popup img {
+    width: 100px;
+    margin: -50px;
+}
+
+.popup h2 {
+    font-size: 38px;
+    font-weight: 400;
+    margin: 15% 0 10px;
+}
+
+.pop-btn {
+    width: 50%;
+    margin-top: 40px;
+    margin-bottom: 0px;
+    font-size: 25px;
+    padding: 10px;
+}
+
+.popup p {
+    font-size: 15px;
+    font-weight: 300;
+}
+
 @keyframes animateWave-3 {
     0% {
         background-position-x: 1000px;
@@ -601,7 +648,7 @@ footer .wave#wave4 {
 
     .about img {
         width: auto;
-        height: 40vh;
+        height: auto;
         border-radius: 35%;
     }
 
@@ -617,9 +664,10 @@ footer .wave#wave4 {
 }
 
 @media (max-width: 480px) {
-    .slide-container{
+    .slide-container {
         padding: 10px;
     }
+
     section {
         margin-bottom: 6rem;
     }
@@ -644,6 +692,7 @@ footer .wave#wave4 {
     .about {
         padding: 5% 5%;
     }
+
     .about p {
         font-size: 1.7rem;
     }
@@ -662,7 +711,6 @@ footer .wave#wave4 {
 }
 
 @media (max-width: 430px) {
-
     html {
         font-size: 50%;
     }

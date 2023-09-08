@@ -1,4 +1,4 @@
-var typed = new Typed("#element", {
+var typed = new typed("#element", {
   strings: [
     "AFFORDABLE",
     "PRACTICAL",
