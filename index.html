@@ -398,8 +398,8 @@
     </section>
     <div class="popup" id="popup">
       <img src="./img/tick.png" alt="tick png" />
-      <h2>Thank you!</h2>
-      <p>your message send successfully</p>
+      <h2 id="popup-h2">Thank you!</h2>
+      <p id="popup-p">your message send successfully</p>
       <button class="btn pop-btn" onclick="closePopup()">OK</button>
     </div>
     <footer>
@@ -479,7 +479,15 @@
     <script>
       //popup
       let popup = document.getElementById("popup");
+      let pop_p = document.getElementById("popup-p");
+      let pop_h = document.getElementById("popup-h2");
       function openPopup(message) {
+        if (message.includes("OK")) {
+          pop_p.innerHTML = `Message send successfully`;
+        } else {
+          pop_p.innerHTML = `Message can't send, due to: ${message}`;
+          pop_h.innerHTML = `Sorry!`;
+        }
         popup.classList.add("open-popup");
       }
       function closePopup() {
