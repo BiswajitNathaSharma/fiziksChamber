@@ -365,7 +365,7 @@
     <div class="page-band" id="contact">CONTACT<span>&nbsp;US</span></div>
 
     <section class="contact">
-      <form id="form" onsubmit="reset()">
+      <form id="form" onsubmit="return false; reset();">
         <h3>GET IN <span>TOUCH</span></h3>
         <div class="input-box">
           <input type="text" id="name" placeholder="Full Name" required />
@@ -443,7 +443,6 @@
       </ul>
     </footer>
 
-
     <!-- Load library from the CDN -->
     <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
     <!-- Setup and start animation! -->
@@ -474,13 +473,13 @@
           From: "sharmaoncourse@gmail.com",
           Subject: subject,
           Body: body,
-        }).then(openPopup());
+        }).then((message) => openPopup(message));
       }
     </script>
     <script>
       //popup
       let popup = document.getElementById("popup");
-      function openPopup() {
+      function openPopup(message) {
         popup.classList.add("open-popup");
       }
       function closePopup() {
