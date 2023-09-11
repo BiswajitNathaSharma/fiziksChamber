@@ -54,3 +54,9 @@ function show_model(){
 function close_model(){
   modal.close();
 }
+
+function changeIframe(change) {
+  show_model()
+  document.getElementById('myiframe').src = change;
+ }
+  

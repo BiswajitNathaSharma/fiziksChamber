@@ -106,7 +106,7 @@
 
     <div class="page-band" id="courses"><span>OUR&nbsp;</span> COURSES</div>
 
-    <section class="courses">
+    <section class="courses" id="Quantum">
       <div class="course-container">
         <div class="course-box">
           <i class="bx bx-atom"></i>
@@ -114,13 +114,25 @@
           <p>
             Quantum Mechanics: Unveiling the Mysteries of the Subatomic World
           </p>
-          <button class="btn open-button" onclick="show_model()">Read More</button>        </div>
+          <button
+            class="btn open-button"
+            onclick="changeIframe(`pdfs/Quantum_mechanics.pdf`)"
+          >
+            Read More
+          </button>
+        </div>
 
         <div class="course-box">
           <i class="fa-solid fa-radiation"></i>
           <h3>Nuclear physics</h3>
           <p>Nuclear Physics: Unveiling the Mysteries of the Atomic Nucleus</p>
-          <button class="btn open-button" onclick="show_model()">Read More</button>        </div>
+          <button
+            class="btn open-button"
+            onclick="changeIframe(`pdfs/Nuclear_physics.pdf`)"
+          >
+            Read More
+          </button>
+        </div>
 
         <div class="course-box">
           <i class="bx bx-test-tube"></i>
@@ -129,14 +141,24 @@
             Thermodynamics: Unveiling the Mysteries of Energy and Matter
             Interplay
           </p>
-          <button class="btn open-button" onclick="show_model()">Read More</button>
+          <button
+            class="btn open-button"
+            onclick="changeIframe(`pdfs/Thermodynamics.pdf`)"
+          >
+            Read More
+          </button>
         </div>
 
         <div class="course-box">
           <i class="bx bx-cog"></i>
           <h3>Mechanics</h3>
           <p>Mechanics: Unveiling the Fundamental Laws that Move the World</p>
-          <button class="btn open-button" onclick="show_model()">Read More</button>
+          <button
+            class="btn open-button"
+            onclick="changeIframe(`pdfs/Mechanics.pdf`)"
+          >
+            Read More
+          </button>
         </div>
 
         <div class="course-box">
@@ -145,7 +167,12 @@
           <p>
             The Electromagnet: Powering Progress through Controlled Attraction
           </p>
-          <button class="btn open-button" onclick="show_model()">Read More</button>
+          <button
+            class="btn open-button"
+            onclick="changeIframe(`pdfs/Electromagnet.pdf`)"
+          >
+            Read More
+          </button>
         </div>
 
         <div class="course-box">
@@ -155,17 +182,26 @@
             Exploring the World of Optics: Illuminating the Path of Light and
             Vision
           </p>
-          <button class="btn open-button" onclick="show_model()">Read More</button>
+          <button
+            class="btn open-button"
+            onclick="changeIframe(`pdfs/Optics.pdf`)"
+          >
+            Read More
+          </button>
         </div>
       </div>
-    </section> 
+    </section>
     <dialog class="modal" id="modal">
-    <button class="button close-button"onclick="close_model()"><i  class="fa-solid fa-xmark "></i></button>
-     
-    <iframe src="./pdfs/Nuclear_physics.pdf" frameborder="0"></iframe>
- 
+      <button class="button close-button" onclick="close_model()">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      <iframe
+        id="myiframe"
+        src="./pdfs/Nuclear_physics.pdf"
+        frameborder="0"
+      ></iframe>
     </dialog>
-  
+
     <div class="page-band" id="hall-of-frames">
       HALL OF<span>&nbsp; FRAMES</span>
     </div>
