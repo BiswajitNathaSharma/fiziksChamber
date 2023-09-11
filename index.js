@@ -42,3 +42,15 @@ menuicon.onclick = () => {
   menuicon.classList.toggle("bx-x");
   navbar.classList.toggle("active");
 };
+
+
+const modal = document.querySelector("#modal");
+const openModal = document.querySelector(".open-button");
+const closeModal = document.querySelector(".close-button");
+
+function show_model(){
+  modal.showModal();
+}
+function close_model(){
+  modal.close();
+}

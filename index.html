@@ -114,15 +114,13 @@
           <p>
             Quantum Mechanics: Unveiling the Mysteries of the Subatomic World
           </p>
-          <a href="" class="btn">Read More</a>
-        </div>
+          <button class="btn open-button" onclick="show_model()">Read More</button>        </div>
 
         <div class="course-box">
           <i class="fa-solid fa-radiation"></i>
           <h3>Nuclear physics</h3>
           <p>Nuclear Physics: Unveiling the Mysteries of the Atomic Nucleus</p>
-          <a href="" class="btn">Read More</a>
-        </div>
+          <button class="btn open-button" onclick="show_model()">Read More</button>        </div>
 
         <div class="course-box">
           <i class="bx bx-test-tube"></i>
@@ -131,14 +129,14 @@
             Thermodynamics: Unveiling the Mysteries of Energy and Matter
             Interplay
           </p>
-          <a href=" " class="btn">Read More</a>
+          <button class="btn open-button" onclick="show_model()">Read More</button>
         </div>
 
         <div class="course-box">
           <i class="bx bx-cog"></i>
           <h3>Mechanics</h3>
           <p>Mechanics: Unveiling the Fundamental Laws that Move the World</p>
-          <a href=" " class="btn">Read More</a>
+          <button class="btn open-button" onclick="show_model()">Read More</button>
         </div>
 
         <div class="course-box">
@@ -147,7 +145,7 @@
           <p>
             The Electromagnet: Powering Progress through Controlled Attraction
           </p>
-          <a href=" " class="btn">Read More</a>
+          <button class="btn open-button" onclick="show_model()">Read More</button>
         </div>
 
         <div class="course-box">
@@ -157,11 +155,17 @@
             Exploring the World of Optics: Illuminating the Path of Light and
             Vision
           </p>
-          <a href=" " class="btn">Read More</a>
+          <button class="btn open-button" onclick="show_model()">Read More</button>
         </div>
       </div>
-    </section>
-
+    </section> 
+    <dialog class="modal" id="modal">
+    <button class="button close-button"onclick="close_model()"><i  class="fa-solid fa-xmark "></i></button>
+     
+    <iframe src="./pdfs/Nuclear_physics.pdf" frameborder="0"></iframe>
+ 
+    </dialog>
+  
     <div class="page-band" id="hall-of-frames">
       HALL OF<span>&nbsp; FRAMES</span>
     </div>

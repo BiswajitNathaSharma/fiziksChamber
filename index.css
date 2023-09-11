@@ -188,12 +188,12 @@ span {
     gap: 3rem;
     justify-content: center;
     text-align: center;
-    transition: .5s ease;
+    transition: 3ms ease-in-out;
 }
 
 .course-container .course-box:hover {
     border-color: var(--main-color);
-    transform: scale(1.02);
+    transform: scale(1.04);
 }
 
 .course-container .course-box {
@@ -288,7 +288,7 @@ span {
     padding: 8px 15px;
     border-radius: 10px;
     background-color: var(--main-color);
-    margin: 15px;
+    margin: 10px;
     cursor: pointer;
     transition: all 0.3s ease;
 }
@@ -791,4 +791,37 @@ footer .wave#wave4 {
         font-size: 20px;
         margin-left: 5px;
     }
+}
+
+.close-button i {
+    font-size: 2.5rem;
+    font-weight: 900;
+}
+
+.close-button {
+    float: right;
+}
+
+iframe{
+    height: 100%;
+    width: 100%;
+}
+.modal {
+    border: 0;
+    box-shadow: 0 0 1.7em var(--main-color);
+    position: fixed;
+    width: 50%;
+    height: 70%;
+    top: 13%;
+    left: 25%;
+    border-radius: 6px;
+    background-color: var(--second-bg-color);
+    overflow: hidden;
+    &>* {
+        margin: 0 0 0.5rem 0;
+    }
+}
+
+.modal::backdrop {
+    background:  linear-gradient(45deg,  rgba(0, 204, 255, 0.198),  rgba(0, 255, 255, 0.141))
 }
