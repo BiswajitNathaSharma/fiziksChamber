@@ -3,8 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>test</title>
 </head>
 <body>
-    <iframe src="" width="476" height="288" frameborder="0" scrolling="no"></iframe>
+    <dialog class="modal" id="modal">
+        <button class="button close-button" onclick="close_model()">
+        <button class="button " onclick="openFullscreen()">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+    </dialog>
+    <iframe 
+     id="myiframe"
+    frameborder="0" width="560" height="315" src="https://www.youtube.com/embed/Vr9Utv8AaB0?si=vXBUZAB3dbZqJTlW&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    <script>
+        
+        /* Get the element you want to display in fullscreen */
+       let elem = document.getElementById("modal");
+       
+       /* Execute the openFullscreen() function to open the video in fullscreen. Include prefixes for browsers that do not support the requestFullscreen property */
+       function openFullscreen() {
+         if (elem.requestFullscreen) {
+           elem.requestFullscreen();
+         } else if (elem.webkitRequestFullscreen) { /* Safari */
+           elem.webkitRequestFullscreen();
+         } else if (elem.msRequestFullscreen) { /* IE11 */
+           elem.msRequestFullscreen();
+         }
+       }
+       </script>
+</body>
 </html>

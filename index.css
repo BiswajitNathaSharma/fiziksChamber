@@ -188,7 +188,7 @@ span {
     gap: 3rem;
     justify-content: center;
     text-align: center;
-    transition: 3ms ease-in-out;
+    transition: 0.3s;
 }
 
 .course-container .course-box:hover {
@@ -812,6 +812,10 @@ iframe {
     width: 100%;
 }
 
+.modal i{
+    font-size: 2.5rem;
+    font-weight: 900;
+}
 .modal {
     border: 0;
     box-shadow: 0 0 1.7em var(--main-color);
@@ -823,12 +827,42 @@ iframe {
     border-radius: 6px;
     background-color: var(--second-bg-color);
     overflow: hidden;
-
+    
     &>* {
         margin: 0 0 0.5rem 0;
     }
 }
+.modal-full{
+    height: 100vh;
+    width: 100vw;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    #halfScreen{
+        display: block;
+    }
+
+}
+.modal .button{
+    margin:auto;
+    }
+.modal-full .close-button{
+    float: right;
+}
+.modal-full #fullScreen{
+        display: none;
+        justify-content: flex-start;
+}
+#halfScreen{
+    display: none;
+    justify-content: flex-start;
+}
+.button-container{
+    display: flex;
+    justify-content: space-evenly;
+}
 
 .modal::backdrop {
-    background: linear-gradient(45deg, rgba(0, 204, 255, 0.198), rgba(0, 255, 255, 0.141))
+    background: linear-gradient(45deg, rgba(0, 204, 255, 0.198), rgba(0, 255, 255, 0.324))
 }

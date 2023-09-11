@@ -60,3 +60,14 @@ function changeIframe(change) {
   document.getElementById('myiframe').src = change;
  }
   
+let makeDialogFullScreen = document.getElementById("modal");
+let fullScreenBtn = document.getElementById("fullScreen");
+fullScreenBtn.addEventListener("click",()=>{
+  makeDialogFullScreen.classList.add("modal-full")
+  
+  
+})
+let halfScreenBtn = document.getElementById("halfScreen");
+halfScreenBtn.addEventListener("click",()=>{
+  makeDialogFullScreen.classList.remove("modal-full")
+})
