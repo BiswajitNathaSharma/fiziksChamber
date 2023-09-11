@@ -722,6 +722,11 @@ footer .wave#wave4 {
         margin-top: 2px;
         height: 230px;
     }
+
+    .close-button i {
+        font-size: 1rem;
+        font-weight: 300;
+    }
 }
 
 @media (max-width: 580px) {
@@ -793,7 +798,7 @@ footer .wave#wave4 {
     }
 }
 
-.close-button i {
+.close-button>i {
     font-size: 2.5rem;
     font-weight: 900;
 }
@@ -802,10 +807,11 @@ footer .wave#wave4 {
     float: right;
 }
 
-iframe{
+iframe {
     height: 100%;
     width: 100%;
 }
+
 .modal {
     border: 0;
     box-shadow: 0 0 1.7em var(--main-color);
@@ -817,11 +823,12 @@ iframe{
     border-radius: 6px;
     background-color: var(--second-bg-color);
     overflow: hidden;
+
     &>* {
         margin: 0 0 0.5rem 0;
     }
 }
 
 .modal::backdrop {
-    background:  linear-gradient(45deg,  rgba(0, 204, 255, 0.198),  rgba(0, 255, 255, 0.141))
+    background: linear-gradient(45deg, rgba(0, 204, 255, 0.198), rgba(0, 255, 255, 0.141))
 }
