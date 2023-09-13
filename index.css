@@ -31,7 +31,7 @@ body {
 
 section {
     min-height: 100vh;
-    padding: 9rem 15% 1rem;
+    padding: 9rem 15% 9rem;
 }
 
 .header {
@@ -773,7 +773,7 @@ footer .wave#wave4 {
             background-repeat: no-repeat;
             background-size: 100%;
             background-position: 0 0;
-            background-image:linear-gradient(aqua,#1f242d);
+            background-image:linear-gradient(aqua,#ff00ee);
             animation: rotate 4s linear infinite;
         }
         
@@ -846,7 +846,6 @@ footer .wave#wave4 {
     .frames {
         padding: 2rem 0% 0rem;
         min-height: auto;
-        height: 100vh;
     }
 
     .contact {
@@ -950,5 +949,5 @@ iframe {
 }
 
 .modal::backdrop {
-    background: linear-gradient(45deg, rgba(0, 204, 255, 0.198), rgba(0, 255, 255, 0.324))
+    background: linear-gradient(45deg, rgb(0, 204, 255), rgba(0, 255, 255, 0.324))
 }
