@@ -436,11 +436,11 @@
             
             onkeyup="validatePhone()" 
           />
-          <input type="text" placeholder="subject" id="subject" />
+          <input type="text" placeholder="Message subject" id="subject" onkeyup="validateSubject()"/>
         </div>
         <textarea
-          name=""
-          id="message"
+        onkeyup="validateMessage()"
+          id="messageBox"
           cols="30"
           rows="8"
           placeholder="Your Message"

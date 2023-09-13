@@ -70,11 +70,10 @@ halfScreenBtn.addEventListener("click", () => {
 });
 //form submit
 let form = document.getElementById("form");
- form.addEventListener("submit", validateSubmit);
+form.addEventListener("submit", validateSubmit);
 function sendmail() {
-  
   let numbers = document.getElementById("number").value;
-  let messages = document.getElementById("message").value;
+  let messages = document.getElementById("messageBox").value;
   let subject = document.getElementById("subject").value;
   let email = document.getElementById("email").value;
   let body = `my email: ${email} <br>phone number: ${numbers} <br> message: ${messages}`;
@@ -115,33 +114,36 @@ let fixThis = document.getElementById("fix-errors");
 
 function validateName() {
   let name = document.getElementById("name").value;
+  const regex = /^\w+( \w+){0,3}$/;
   if (name.length == 0) {
     errors.innerHTML = "name is required!";
     return false;
   }
-  if (!name.match(/^[A-Za-z]*\s{1}[A-Za-z]*\s{1}[A-Za-z]*$/)) {
-    errors.innerHTML = "Enter full name";
+  if (!regex.test(name)){
+    errors.innerHTML = "Enter a valid name";
     return false;
-  } 
-    errors.innerHTML = "";
-    return true;
-  
+  }
+  errors.innerHTML = "";
+  return true;
 }
 function validatePhone() {
   let phone = document.getElementById("number").value;
+  const regex = /^[6-9]\d{9}$/;
   if (phone.length == 0) {
     errors.innerHTML = "phone number is required";
     return false;
-  }  if (phone.length !== 10) {
+  }
+ 
+  if (phone.length !== 10) {
     errors.innerHTML = "phone number should be 10 digits";
     return false;
-  } if (!phone.match(/^[0-9]{10}$/)) {
-    errors.innerHTML = "Only digits are allowed";
+  }
+  if (!regex.test(phone)) {
+    errors.innerHTML = "invalid phone number";
     return false;
-  } 
-    errors.innerHTML = "";
-    return true;
-  
+  }
+  errors.innerHTML = "";
+  return true;
 }
 function validateEmail() {
   let email = document.getElementById("email").value;
@@ -159,9 +161,36 @@ function validateEmail() {
   return true;
 }
 
+function validateSubject(){
+  subject = document.getElementById("subject").value;
+    let required = 10;
+    let left = required - (subject.length)
+    if (subject.length == 0) {
+      errors.innerHTML = "you have to define subject";
+      return false;
+    }
+    if (subject.length < required) {
+      errors.innerHTML = `${left} more letters to add as subject.`
+      return false;
+    }
+    
+  errors.innerHTML = "";
+  return true;
+}
+function validateMessage(){
+    messages = document.getElementById("messageBox").value;
+    let required = 40;
+    let left = required - (messages.length)
+    if (messages.length < required) {
+      errors.innerHTML = `${left} more letters to send the message.`
+      return false
+    }
+    errors.innerHTML = "Now message can be send.";
+    return true;
+  }
 function validateSubmit(e) {
   e.preventDefault();
-  if (!validateEmail() || !validateName() || !validatePhone()) {
+  if (!validateEmail() || !validateName() || !validatePhone() || !validateSubject() || !validateMessage()) {
     fixThis.style.display = "block";
     fixThis.innerHTML = "please fix the error to submit.";
     setTimeout(() => {
