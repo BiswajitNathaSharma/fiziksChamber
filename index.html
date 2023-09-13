@@ -424,15 +424,17 @@
       <form id="form">
         <h3>GET IN <span>TOUCH</span></h3>
         <div class="input-box">
-          <input type="text" id="name" placeholder="Full Name" required />
-          <input type="email" id="email" placeholder="Email address" required />
+          <input type="text" id="name" placeholder="Full Name" onkeyup="validateName()" />
+          <input type="email" id="email" placeholder="Email address"  
+          onkeyup="validateEmail()" />
         </div>
         <div class="input-box">
           <input
             type="number"
             id="number"
             placeholder="Phone Number"
-            required
+            
+            onkeyup="validatePhone()" 
           />
           <input type="text" placeholder="subject" id="subject" />
         </div>
@@ -442,14 +444,16 @@
           cols="30"
           rows="8"
           placeholder="Your Message"
-          required
         ></textarea>
-        <input type="submit" id="submit" value="Send Message" class="btn" />
+        <br><span id="errors"></span><br>
+        <br><span id="fix-errors"></span><br>
+        <input type="submit" id="submit" value="Send Message" class="btn"/>
         <button class="btn">
           <a target="_blank" href="https://goo.gl/maps/JiRSxASok7c7odBMA"
             >Location</a
           >
         </button>
+  
       </form>
     </section>
     <div class="popup" id="popup">
@@ -512,45 +516,10 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-element-bundle.min.js"></script>
     <script src="https://smtpjs.com/v3/smtp.js"></script>
     <script>
-      let form = document.getElementById("form");
-      form.addEventListener("submit", sendmail);
-      function sendmail() {
-        event.preventDefault();
-        let numbers = document.getElementById("number").value;
-        let messages = document.getElementById("message").value;
-        let subject = document.getElementById("subject").value;
-        let email = document.getElementById("email").value;
-        let body = `my email: ${email} <br>phone number: ${numbers} <br> message: ${messages}`;
-        Email.send({
-          Host: "smtp.elasticemail.com",
-          Username: "sharmaoncourse@gmail.com",
-          Password: "B33D9F91BB922C2DC7D2B52C77A1E9BF2F68",
-          To: "lipubiswajit109@gmail.com",
-          From: "sharmaoncourse@gmail.com",
-          Subject: subject,
-          Body: body,
-        }).then((message) => openPopup(message));
-      }
+ 
     </script>
     <script>
-      //popup
-      let popup = document.getElementById("popup");
-      let pop_p = document.getElementById("popup-p");
-      let pop_h = document.getElementById("popup-h2");
-      let myform = document.getElementById("form");
-      function openPopup(message) {
-        if (message.includes("OK")) {
-          pop_p.innerHTML = `Message send successfully`;
-        } else {
-          pop_p.innerHTML = `Message can't send, due to: ${message}`;
-          pop_h.innerHTML = `Sorry!`;
-        }
-        popup.classList.add("open-popup");
-      }
-      function closePopup() {
-        popup.classList.remove("open-popup");
-        myform.reset();
-      }
+      
     </script>
   </body>
 </html>

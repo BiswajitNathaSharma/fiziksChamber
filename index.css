@@ -951,3 +951,9 @@ iframe {
 .modal::backdrop {
     background: linear-gradient(45deg, rgb(0, 204, 255), rgba(0, 255, 255, 0.324))
 }
+
+#errors, #fix-errors{
+    position: relative;
+    font-size: 2rem;
+    color: red;
+}
