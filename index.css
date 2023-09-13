@@ -113,10 +113,55 @@ span {
     color: var(--main-color);
 }
 
+.right-section img{
+    border-radius: 30px;
+}
+.animated-border {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+	position: relative;
+	z-index: 0;
+	border-radius: 20px;
+	padding: 1rem;
+	overflow: hidden;
+	&::before {
+        content: '';
+		position: absolute;
+		z-index: -2;
+        top: -50%;
+		width: 50%;
+		height: 200%;
+		background-repeat: no-repeat;
+		background-size: 100%;
+		background-position: 0 0;
+		background:linear-gradient(rgb(255, 0, 251),rgb(0, 234, 255));
+		animation: rotate 4s linear infinite;
+	}
+	
+	&::after {
+		content: '';
+		position: absolute;
+		z-index: -1;
+		left: 6px;
+		top: 6px;
+		background: var(--bg-color);
+		width: calc(100% - 12px);
+		height: calc(100% - 12px);
+	}
+}
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+	100% {
+		transform: rotate(360deg);
+	}
+}
 .right-section {
     bottom: 0;
     animation: floatImage 4s ease-in-out infinite;
-
+    overflow: hidden;
 }
 
 @keyframes floatImage {
@@ -131,6 +176,7 @@ span {
 }
 
 .about {
+    overflow: hidden;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -266,17 +312,18 @@ span {
     flex-direction: column;
     align-items: center;
     display: flex;
-    padding: 0px 10px;
+    padding: 3px 13px;
 }
 
 .name {
-    font-size: 2rem;
+    font-size: 2.1rem;
     font-weight: 500;
     color: var(--text-color);
+    padding-bottom: 2px;
 }
 
 .description {
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     text-align: center;
 }
 
@@ -323,7 +370,7 @@ swiper-slide {
     background-position: center;
     background-size: cover;
     width: 300px;
-    height: 300px;
+    height: 320px;
 }
 
 swiper-slide img {
@@ -581,7 +628,7 @@ footer .wave#wave4 {
 
     .about-left img {
         width: 32vw;
-        height: 40vh;
+        height: inherit;
     }
 
     .page-band {
@@ -634,7 +681,7 @@ footer .wave#wave4 {
     footer .footer-logo {
         position: absolute;
         margin-top: 0;
-        padding-left: 0%;
+        padding-left: 0;
     }
 
     footer .footer-logo a {
@@ -707,6 +754,48 @@ footer .wave#wave4 {
     .courses {
         padding: 9rem 12% 1rem;
     }
+    .about-left {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        z-index: 0;
+        border-radius: 20px;
+        padding: 1rem;
+        overflow: hidden;
+        &::before {
+            content: '';
+            position: absolute;
+            z-index: -2;
+            top: -50%;
+            width: 50%;
+            height: 200%;
+            background-repeat: no-repeat;
+            background-size: 100%;
+            background-position: 0 0;
+            background-image:linear-gradient(aqua,#1f242d);
+            animation: rotate 4s linear infinite;
+        }
+        
+        &::after {
+            content: '';
+            position: absolute;
+            z-index: -1;
+            left: 6px;
+            top: 6px;
+            background: var(--bg-color);
+            width: calc(100% - 12px);
+            height: calc(100% - 12px);
+        }
+    }
+    @keyframes rotate {
+        0% {
+            transform: rotate(0deg);
+        }
+        100% {
+            transform: rotate(360deg);
+        }
+    }
 }
 
 @media (max-width: 430px) {
@@ -720,7 +809,7 @@ footer .wave#wave4 {
 
     .about img {
         margin-top: 2px;
-        height: 230px;
+        height: 40vh;
     }
 
     .close-button i {
@@ -753,9 +842,6 @@ footer .wave#wave4 {
         letter-spacing: 0;
     }
 
-    footer {
-        flex-direction: column;
-    }
 
     .frames {
         padding: 2rem 0% 0rem;
@@ -774,7 +860,6 @@ footer .wave#wave4 {
         align-items: center;
         row-gap: 150px;
         flex-direction: column;
-
     }
 }
 
@@ -789,7 +874,7 @@ footer .wave#wave4 {
         align-items: center;
         row-gap: 100px;
         flex-direction: column;
-        margin-top: 5%;
+        margin-top: 0%;
     }
 
     footer .social-icons {

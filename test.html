@@ -1,35 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>test</title>
-</head>
-<body>
-    <dialog class="modal" id="modal">
-        <button class="button close-button" onclick="close_model()">
-        <button class="button " onclick="openFullscreen()">
-          <i class="fa-solid fa-xmark"></i>
-        </button>
-    </dialog>
-    <iframe 
-     id="myiframe"
-    frameborder="0" width="560" height="315" src="https://www.youtube.com/embed/Vr9Utv8AaB0?si=vXBUZAB3dbZqJTlW&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-    <script>
-        
-        /* Get the element you want to display in fullscreen */
-       let elem = document.getElementById("modal");
-       
-       /* Execute the openFullscreen() function to open the video in fullscreen. Include prefixes for browsers that do not support the requestFullscreen property */
-       function openFullscreen() {
-         if (elem.requestFullscreen) {
-           elem.requestFullscreen();
-         } else if (elem.webkitRequestFullscreen) { /* Safari */
-           elem.webkitRequestFullscreen();
-         } else if (elem.msRequestFullscreen) { /* IE11 */
-           elem.msRequestFullscreen();
-         }
-       }
-       </script>
-</body>
+    <style>
+      body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+}
+
+*, *::before, *::after {
+	box-sizing: border-box;
+}
+
+@keyframes rotate {
+	100% {
+		transform: rotate(1turn);
+	}
+}
+
+.rainbow {
+	position: relative;
+	z-index: 0;
+	width: 400px;
+	height: 300px;
+	border-radius: 10px;
+	overflow: hidden;
+	padding: 2rem;
+	
+	&::before {
+		content: '';
+		position: absolute;
+		z-index: -2;
+		left: -50%;
+		top: -50%;
+		width: 200%;
+		height: 200%;
+		background-repeat: no-repeat;
+		background-size: 50% 50%, 50% 50%;
+		background-position: 0 0, 100% 0, 100% 100%, 0 100%;
+		background-image: linear-gradient(#399983, #399953);
+		animation: rotate 3s linear infinite;
+	}
+	
+	&::after {
+		content: '';
+		position: absolute;
+		z-index: -1;
+		left: 6px;
+		top: 6px;
+		width: calc(100% - 12px);
+		height: calc(100% - 12px);
+		border-radius: 5px;
+    background-color: wheat;
+	}
+}
+    </style>
+  </head>
+  <body>
+    <div class="rainbow"></div>
+  </body>
 </html>
