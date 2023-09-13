@@ -159,7 +159,8 @@ function validateEmail() {
   return true;
 }
 
-function validateSubmit() {
+function validateSubmit(e) {
+  e.preventDefault();
   if (!validateEmail() || !validateName() || !validatePhone()) {
     fixThis.style.display = "block";
     fixThis.innerHTML = "please fix the error to submit.";
