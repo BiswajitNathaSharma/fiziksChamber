@@ -424,27 +424,32 @@
       <form id="form">
         <h3>GET IN <span>TOUCH</span></h3>
         <div class="input-box">
-          <span id="name-error"></span>
-          <input type="text" id="name"  autocomplete="off" placeholder="Full Name" onkeyup="validateName()" />
-          <span id="email-error"></span>
-          <input type="email" id="email"  autocomplete="off" placeholder="Email address"  
+          <input type="text" id="name" placeholder="Full Name" onkeyup="validateName()" />
+          <input type="email" id="email" placeholder="Email address"  
           onkeyup="validateEmail()" />
         </div>
         <div class="input-box">
-          <span id="number-error"></span>
           <input
-          type="number"
-          id="number"
-          placeholder="Phone Number"
-          onkeyup="validatePhone()" 
+            type="number"
+            id="number"
+            placeholder="Phone Number"
+            
+            onkeyup="validatePhone()" 
           />
+<<<<<<< HEAD
           <input type="text" placeholder="Message subject" id="subject" onkeyup="validateSubject()"/>
+=======
+          <input type="text" placeholder="subject" id="subject" />
+>>>>>>> parent of 2541b71 (fixed errors on form)
         </div>
-        <div class="text-area">
-        <span id="message-error"></span>
         <textarea
+<<<<<<< HEAD
         onkeyup="validateMessage()"
           id="messageBox"
+=======
+          name=""
+          id="message"
+>>>>>>> parent of 2541b71 (fixed errors on form)
           cols="30"
           rows="8"
           placeholder="Your Message"
