@@ -3,64 +3,40 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>test</title>
+    <title>Document</title>
+    <link rel="stylesheet" href="./index.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
     <style>
-      body {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	height: 100vh;
-}
+      form > i {
+        position: absolute;
+        font-size: 2rem;
+        color: black;
+        display: flex;
+        justify-content: flex-end;
+      }
 
-*, *::before, *::after {
-	box-sizing: border-box;
-}
-
-@keyframes rotate {
-	100% {
-		transform: rotate(1turn);
-	}
-}
-
-.rainbow {
-	position: relative;
-	z-index: 0;
-	width: 400px;
-	height: 300px;
-	border-radius: 10px;
-	overflow: hidden;
-	padding: 2rem;
-	
-	&::before {
-		content: '';
-		position: absolute;
-		z-index: -2;
-		left: -50%;
-		top: -50%;
-		width: 200%;
-		height: 200%;
-		background-repeat: no-repeat;
-		background-size: 50% 50%, 50% 50%;
-		background-position: 0 0, 100% 0, 100% 100%, 0 100%;
-		background-image: linear-gradient(#399983, #399953);
-		animation: rotate 3s linear infinite;
-	}
-	
-	&::after {
-		content: '';
-		position: absolute;
-		z-index: -1;
-		left: 6px;
-		top: 6px;
-		width: calc(100% - 12px);
-		height: calc(100% - 12px);
-		border-radius: 5px;
-    background-color: wheat;
-	}
-}
+      form > input {
+        top: 50%;
+        left: 50%;
+        text-indent: 40px;
+        width: 50%;
+        height: 50%;
+      }
     </style>
   </head>
   <body>
-    <div class="rainbow"></div>
+    <div class="parent">
+      <form action="" method="post">
+        <i class="bx bxs-error-circle icon"></i>
+        <input type="text" name="message" placeholder="Type..." />
+      </form>
+    </div>
   </body>
+
+  <script>
+        
+  </script>
 </html>
