@@ -429,9 +429,9 @@
         <h3>GET IN <span>TOUCH</span></h3>
         <div class="input-box">
           <span id="name-error"></span>
-          <input type="text" id="name"  autocomplete="off" placeholder="Full Name" onkeyup="validateName()" />
+          <input type="text" id="name" placeholder="Full Name" onkeyup="validateName()" />
           <span id="email-error"></span>
-          <input type="email" id="email"  autocomplete="off" placeholder="Email address"  
+          <input type="email" id="email"  placeholder="Email address"  
           onkeyup="validateEmail()" />
         </div>
         <div class="input-box">
@@ -442,21 +442,19 @@
           placeholder="Phone Number"
           onkeyup="validatePhone()" 
           />
-
-          <span id="subject-error"></span>
+        <span id="subject-error"></span>
           <input type="text" placeholder="Message subject" id="subject" onkeyup="validateSubject()"/>
-
-
-        </div>
+          </div>
         <div class="text-area">
-        <span id="message-error"></span>
-        <textarea
+          <span id="message-error"></span>
+          <textarea
 	        onkeyup="validateMessage()"
           id="messageBox"
           cols="30"
           rows="8"
           placeholder="Your Message"
-        ></textarea></div>
+          >
+        </textarea></div>
 
         <br><span id="errors"></span><br>
         <br><span id="fix-errors"></span><br>

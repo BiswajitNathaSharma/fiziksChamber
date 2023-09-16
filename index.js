@@ -93,6 +93,7 @@ let popup = document.getElementById("popup");
 let pop_p = document.getElementById("popup-p");
 let pop_h = document.getElementById("popup-h2");
 let myform = document.getElementById("form");
+
 function openPopup(message) {
   if (message.includes("OK")) {
     pop_p.innerHTML = `Message send successfully`;
@@ -105,9 +106,13 @@ function openPopup(message) {
 function closePopup() {
   popup.classList.remove("open-popup");
   myform.reset();
+  nameErr.innerHTML = ``;
+  emailErr.innerHTML = ``;
+  phErr.innerHTML = ``;
+  subErr.innerHTML = ``;
+  msgErr.innerHTML = ``;
+  errors.innerHTML=``;
 }
-
-// form validation
 
 // form validation
 
@@ -183,6 +188,8 @@ function validateEmail() {
 
 function validateSubject() {
   subject = document.getElementById("subject").value;
+  let maxi = 25;
+  let overChar = subject.length - maxi;
   let required = 10;
   let left = required - subject.length;
   if (subject.length == 0) {
@@ -194,12 +201,16 @@ function validateSubject() {
   if (subject.length < required) {
     errors.innerHTML = `${left} more letters to add as subject.`;
     subErr.innerHTML = "<i class='bx bxs-error-circle'></i>";
-
     return false;
+  }
+  if (subject.length > 25) {
+    errors.innerHTML = `<i class='bx bx-bulb'>ProTip! Great subject summaries contain fewer than ${maxi} characters. Your subject cotains ${overChar} characters more than required.</i>`;
+    subErr.innerHTML = "<i class='bx bxs-error-circle'></i>";
+    return true;
   }
 
   errors.innerHTML = "";
-  emailErr.innerHTML = "<i class='bx bx-check-circle'></i>";
+  subErr.innerHTML = "<i class='bx bx-check-circle'></i>";
   return true;
 }
 function validateMessage() {
@@ -212,8 +223,8 @@ function validateMessage() {
 
     return false;
   }
-  errors.innerHTML= "Now message can be send.";
-  emailErr.innerHTML = "<i class='bx bx-check-circle'></i>";
+  errors.innerHTML = "Now message can be send.";
+  msgErr.innerHTML = "<i class='bx bx-check-circle'></i>";
   return true;
 }
 function validateSubmit(e) {

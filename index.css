@@ -861,6 +861,10 @@ footer .wave#wave4 {
         margin-bottom: 30%;
     }
 
+    .input-box i, .text-area i {
+        left: 4%;
+        padding: 0;
+    }
     footer {
         display: flex;
         justify-content: center;
@@ -961,9 +965,9 @@ iframe {
 
 .input-box i, .text-area i {
     position: absolute;
-    margin-top: 18px;
-    padding-top: 3px;
+    margin-top: 13px;
     font-size: 2.3rem;
+    padding-top: 8px ;
  }
  .input-box input, textarea{
     text-indent: 15px;
