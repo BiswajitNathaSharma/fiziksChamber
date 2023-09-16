@@ -424,27 +424,46 @@
       <form id="form">
         <h3>GET IN <span>TOUCH</span></h3>
         <div class="input-box">
-          <input type="text" id="name" placeholder="Full Name" onkeyup="validateName()" />
-          <input type="email" id="email" placeholder="Email address"  
+          <span id="name-error"></span>
+          <input type="text" id="name"  autocomplete="off" placeholder="Full Name" onkeyup="validateName()" />
+          <span id="email-error"></span>
+          <input type="email" id="email"  autocomplete="off" placeholder="Email address"  
           onkeyup="validateEmail()" />
         </div>
         <div class="input-box">
+          <span id="number-error"></span>
           <input
-            type="number"
-            id="number"
-            placeholder="Phone Number"
-            
-            onkeyup="validatePhone()" 
+          type="number"
+          id="number"
+          placeholder="Phone Number"
+          onkeyup="validatePhone()" 
           />
+<<<<<<< HEAD
           <input type="text" placeholder="Message subject" id="subject" onkeyup="validateSubject()"/>
+=======
+          <span id="subject-error"></span>
+          <input type="text" placeholder="subject" id="subject" onkeyup="validateSubject()"/>
+>>>>>>> test
         </div>
+        <div class="text-area">
+        <span id="message-error"></span>
         <textarea
+<<<<<<< HEAD
         onkeyup="validateMessage()"
           id="messageBox"
           cols="30"
           rows="8"
           placeholder="Your Message"
         ></textarea>
+=======
+        name=""
+        id="message"
+        cols="30"
+        rows="8"
+        placeholder="Your Message"
+        onkeyup="validateMessage()" 
+        ></textarea></div>
+>>>>>>> test
         <br><span id="errors"></span><br>
         <br><span id="fix-errors"></span><br>
         <input type="submit" id="submit" value="Send Message" class="btn"/>
