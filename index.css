@@ -610,6 +610,13 @@ footer .wave#wave4 {
     html {
         font-size: 55%;
     }
+    .input-box i, .text-area i {
+        margin-top: 13px;
+        font-size: 2.3rem;
+     }
+     .input-box input, textarea{
+        text-indent: 15px;
+     }
 }
 
 @media (max-width: 991px) {
@@ -952,8 +959,23 @@ iframe {
     background: linear-gradient(45deg, rgb(0, 204, 255), rgba(0, 255, 255, 0.324))
 }
 
-#errors, #fix-errors{
+.input-box i, .text-area i {
+    position: absolute;
+    margin-top: 18px;
+    padding-top: 3px;
+    font-size: 2.3rem;
+ }
+ .input-box input, textarea{
+    text-indent: 15px;
+ }
+#errors, #fix-errors, .bxs-error-circle{
     position: relative;
     font-size: 2rem;
     color: red;
+}
+.bx-check-circle{
+    color: rgb(17, 255, 17);
+}
+.bx-bulb{
+    color: rgb(255, 221, 0);
 }
