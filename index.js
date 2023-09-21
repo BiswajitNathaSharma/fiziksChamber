@@ -93,6 +93,7 @@ let popup = document.getElementById("popup");
 let pop_p = document.getElementById("popup-p");
 let pop_h = document.getElementById("popup-h2");
 let myform = document.getElementById("form");
+
 function openPopup(message) {
   if (message.includes("OK")) {
     pop_p.innerHTML = `Message send successfully`;
@@ -105,6 +106,12 @@ function openPopup(message) {
 function closePopup() {
   popup.classList.remove("open-popup");
   myform.reset();
+  nameErr.innerHTML = ``;
+  emailErr.innerHTML = ``;
+  phErr.innerHTML = ``;
+  subErr.innerHTML = ``;
+  msgErr.innerHTML = ``;
+  errors.innerHTML=``;
 }
 
 // form validation
@@ -125,14 +132,16 @@ function validateName() {
     nameErr.innerHTML = "<i class='bx bxs-error-circle'></i>";
     return false;
   }
-  if (!name.match(/^[A-Za-z]*\s{1}[A-Za-z]*\s{1}[A-Za-z]*$/)) {
+  if (!regex.test(name)) {
     errors.innerHTML = "Enter full name";
+    nameErr.innerHTML = "<i class='bx bxs-error-circle'></i>";
     return false;
-  } 
-    errors.innerHTML = "";
-    return true;
-  
+  }
+  errors.innerHTML = "";
+  nameErr.innerHTML = "<i class='bx bx-check-circle'></i>";
+  return true;
 }
+
 function validatePhone() {
   let phone = document.getElementById("number").value;
   const regex = /^[6-9]\d{9}$/;
@@ -140,17 +149,21 @@ function validatePhone() {
     errors.innerHTML = "phone number is required";
     phErr.innerHTML = "<i class='bx bxs-error-circle'></i>";
     return false;
-  }  if (phone.length !== 10) {
+  }
+
+  if (phone.length !== 10) {
     errors.innerHTML = "phone number should be 10 digits";
     phErr.innerHTML = "<i class='bx bxs-error-circle'></i>";
     return false;
-  } if (!phone.match(/^[0-9]{10}$/)) {
-    errors.innerHTML = "Only digits are allowed";
+  }
+  if (!regex.test(phone)) {
+    errors.innerHTML = "invalid phone number";
+    phErr.innerHTML = "<i class='bx bxs-error-circle'></i>";
     return false;
-  } 
-    errors.innerHTML = "";
-    return true;
-  
+  }
+  errors.innerHTML = "";
+  phErr.innerHTML = "<i class='bx bx-check-circle'></i>";
+  return true;
 }
 function validateEmail() {
   let email = document.getElementById("email").value;
@@ -158,11 +171,13 @@ function validateEmail() {
   if (email.length == 0) {
     errors.innerHTML = "Email shouldn't be empty";
     emailErr.innerHTML = "<i class='bx bxs-error-circle'></i>";
+
     return false;
   }
   if (!email.match(/^[a-z0-9](\.?[a-z0-9]){3,}@[Gg][Mm][Aa][Ii][Ll]\.com$/)) {
     errors.innerHTML = "Enter a valid email, Only gmail alowed";
     emailErr.innerHTML = "<i class='bx bxs-error-circle'></i>";
+
     return false;
   }
 
@@ -171,8 +186,56 @@ function validateEmail() {
   return true;
 }
 
-function validateSubmit() {
-  if (!validateEmail() || !validateName() || !validatePhone()) {
+function validateSubject() {
+  subject = document.getElementById("subject").value;
+  let maxi = 25;
+  let overChar = subject.length - maxi;
+  let required = 10;
+  let left = required - subject.length;
+  if (subject.length == 0) {
+    errors.innerHTML = "you have to define subject";
+    subErr.innerHTML = "<i class='bx bxs-error-circle'></i>";
+
+    return false;
+  }
+  if (subject.length < required) {
+    errors.innerHTML = `${left} more letters to add as subject.`;
+    subErr.innerHTML = "<i class='bx bxs-error-circle'></i>";
+    return false;
+  }
+  if (subject.length > 25) {
+    errors.innerHTML = `<i class='bx bx-bulb'>ProTip! Great subject summaries contain fewer than ${maxi} characters. Your subject cotains ${overChar} characters more than required.</i>`;
+    subErr.innerHTML = "<i class='bx bxs-error-circle'></i>";
+    return true;
+  }
+
+  errors.innerHTML = "";
+  subErr.innerHTML = "<i class='bx bx-check-circle'></i>";
+  return true;
+}
+function validateMessage() {
+  messages = document.getElementById("messageBox").value;
+  let required = 40;
+  let left = required - messages.length;
+  if (messages.length < required) {
+    errors.innerHTML = `${left} more letters to send the message.`;
+    msgErr.innerHTML = "<i class='bx bxs-error-circle'></i>";
+
+    return false;
+  }
+  errors.innerHTML = "Now message can be send.";
+  msgErr.innerHTML = "<i class='bx bx-check-circle'></i>";
+  return true;
+}
+function validateSubmit(e) {
+  e.preventDefault();
+  if (
+    !validateEmail() ||
+    !validateName() ||
+    !validatePhone() ||
+    !validateSubject() ||
+    !validateMessage()
+  ) {
     fixThis.style.display = "block";
     fixThis.innerHTML = "please fix the error to submit.";
     setTimeout(() => {

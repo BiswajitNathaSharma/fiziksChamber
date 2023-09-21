@@ -392,6 +392,7 @@ swiper-slide img {
 .contact form .input-box {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 .contact form .input-box input,
@@ -410,15 +411,6 @@ swiper-slide img {
     margin-right: 4px;
     width: 49%;
 }
-.input-box i, .text-area i {
-    position: absolute;
-    margin-top: 18px;
-    padding-top: 3px;
-    font-size: 2.3rem;
- }
- .input-box input, textarea{
-    text-indent: 15px;
- }
 
 .contact form .btn a {
     text-decoration: none;
@@ -625,7 +617,6 @@ footer .wave#wave4 {
      .input-box input, textarea{
         text-indent: 15px;
      }
-    
 }
 
 @media (max-width: 991px) {
@@ -870,6 +861,10 @@ footer .wave#wave4 {
         margin-bottom: 30%;
     }
 
+    .input-box i, .text-area i {
+        left: 4%;
+        padding: 0;
+    }
     footer {
         display: flex;
         justify-content: center;
@@ -968,6 +963,15 @@ iframe {
     background: linear-gradient(45deg, rgb(0, 204, 255), rgba(0, 255, 255, 0.324))
 }
 
+.input-box i, .text-area i {
+    position: absolute;
+    margin-top: 13px;
+    font-size: 2.3rem;
+    padding-top: 8px ;
+ }
+ .input-box input, textarea{
+    text-indent: 15px;
+ }
 #errors, #fix-errors, .bxs-error-circle{
     position: relative;
     font-size: 2rem;
