@@ -9,9 +9,10 @@
 
     <!-- boxicons import -->
     <link
-      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
-      rel="stylesheet"
+    href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+    rel="stylesheet"
     />
+    <!-- bundel import -->
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
@@ -427,6 +428,9 @@
     <section class="contact">
       <form id="form">
         <h3>GET IN <span>TOUCH</span></h3>
+
+        <!-- name section  -->
+
         <div class="input-box">
           <span id="name-error"></span>
           <input type="text" id="name" placeholder="Full Name" onkeyup="validateName()" />
@@ -434,6 +438,9 @@
           <input type="email" id="email"  placeholder="Email address"  
           onkeyup="validateEmail()" />
         </div>
+
+        <!-- phone number section  -->
+
         <div class="input-box">
           <span id="number-error"></span>
           <input
@@ -445,16 +452,19 @@
 <span id="subject-error"></span>
           <input type="text" placeholder="Message subject" id="subject" onkeyup="validateSubject()"/>
           </div>
+
+          <!-- message box  -->
         <div class="text-area">
           <span id="message-error"></span>
           <textarea
 	        onkeyup="validateMessage()"
+          placeholder="Your Message"
           id="messageBox"
           cols="30"
           rows="8"
-          placeholder="Your Message"
           >
-        </textarea></div>
+        </textarea>
+      </div>
 
         <br><span id="errors"></span><br>
         <br><span id="fix-errors"></span><br>
