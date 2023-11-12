@@ -142,6 +142,7 @@ span {
 	&::after {
 		content: '';
 		position: absolute;
+        border-radius: 16px;
 		z-index: -1;
 		left: 6px;
 		top: 6px;
