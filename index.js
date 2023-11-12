@@ -223,7 +223,7 @@ function validateMessage() {
 
     return false;
   }
-  errors.innerHTML = "Now message can be send.";
+  errors.innerHTML = "<span style='color:rgb(17, 255, 17)'>Now message can be send</span>";
   msgErr.innerHTML = "<i class='bx bx-check-circle'></i>";
   return true;
 }
