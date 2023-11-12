@@ -204,8 +204,8 @@ function validateSubject() {
     return false;
   }
   if (subject.length > 25) {
-    errors.innerHTML = `<i class='bx bx-bulb'>ProTip! Great subject summaries contain fewer than ${maxi} characters. Your subject cotains ${overChar} characters more than required.</i>`;
-    subErr.innerHTML = "<i class='bx bxs-error-circle'></i>";
+    errors.innerHTML = `<i class='bx bx-bulb yellow-error'> ProTip! Great subject summaries contain fewer than ${maxi} characters. Your subject cotains ${overChar} characters more than required.</i>`;
+    subErr.innerHTML = "<i class='bx bxs-error-circle yellow-error'></i>";
     return true;
   }
 
