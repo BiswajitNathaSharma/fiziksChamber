@@ -11,10 +11,12 @@
     outline: none;
     scroll-behavior: smooth;
 }
-*::selection{
+
+*::selection {
     background: var(--main-color);
     color: var(--bg-color);
 }
+
 :root {
     --bg-color: #1f242d;
     --second-bg-color: #323946;
@@ -116,52 +118,57 @@ span {
     color: var(--main-color);
 }
 
-.right-section img{
+.right-section img {
     border-radius: 30px;
 }
+
 .animated-border {
     display: flex;
     align-items: center;
     justify-content: center;
-	position: relative;
-	z-index: 0;
-	border-radius: 20px;
-	padding: 1rem;
-	overflow: hidden;
-	&::before {
+    position: relative;
+    z-index: 0;
+    border-radius: 20px;
+    padding: 1rem;
+    overflow: hidden;
+
+    &::before {
         content: '';
-		position: absolute;
-		z-index: -2;
+        position: absolute;
+        z-index: -2;
         top: -50%;
-		width: 50%;
-		height: 200%;
-		background-repeat: no-repeat;
-		background-size: 100%;
-		background-position: 0 0;
-		background:linear-gradient(rgb(255, 0, 251),rgb(0, 234, 255));
-		animation: rotate 4s linear infinite;
-	}
-	
-	&::after {
-		content: '';
-		position: absolute;
+        width: 50%;
+        height: 200%;
+        background-repeat: no-repeat;
+        background-size: 100%;
+        background-position: 0 0;
+        background: linear-gradient(rgb(255, 0, 251), rgb(0, 234, 255));
+        animation: rotate 4s linear infinite;
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
         border-radius: 16px;
-		z-index: -1;
-		left: 6px;
-		top: 6px;
-		background: var(--bg-color);
-		width: calc(100% - 12px);
-		height: calc(100% - 12px);
-	}
+        z-index: -1;
+        left: 6px;
+        top: 6px;
+        background: var(--bg-color);
+        width: calc(100% - 12px);
+        height: calc(100% - 12px);
+    }
 }
+
 @keyframes rotate {
     0% {
         transform: rotate(0deg);
     }
-	100% {
-		transform: rotate(360deg);
-	}
+
+    100% {
+        transform: rotate(360deg);
+    }
 }
+
 .right-section {
     bottom: 0;
     animation: floatImage 4s ease-in-out infinite;
@@ -196,7 +203,7 @@ span {
     border-radius: 20%;
 }
 
-.page-band { 
+.page-band {
     height: 3rem;
     width: 100vw;
     font-size: 4rem;
@@ -610,13 +617,17 @@ footer .wave#wave4 {
     html {
         font-size: 55%;
     }
-    .input-box i, .text-area i {
+
+    .input-box i,
+    .text-area i {
         margin-top: 13px;
         font-size: 2.3rem;
-     }
-     .input-box input, textarea{
+    }
+
+    .input-box input,
+    textarea {
         text-indent: 15px;
-     }
+    }
 }
 
 @media (max-width: 991px) {
@@ -679,6 +690,10 @@ footer .wave#wave4 {
         display: block;
         font-size: 2rem;
         margin: 3rem 0;
+    }
+
+    .open-button {
+        display: none;
     }
 
     footer .social-icons {
@@ -761,6 +776,7 @@ footer .wave#wave4 {
     .courses {
         padding: 9rem 12% 1rem;
     }
+
     .about-left {
         display: flex;
         align-items: center;
@@ -770,6 +786,7 @@ footer .wave#wave4 {
         border-radius: 20px;
         padding: 1rem;
         overflow: hidden;
+
         &::before {
             content: '';
             position: absolute;
@@ -780,10 +797,10 @@ footer .wave#wave4 {
             background-repeat: no-repeat;
             background-size: 100%;
             background-position: 0 0;
-            background-image:linear-gradient(aqua,#ff00ee);
+            background-image: linear-gradient(aqua, #ff00ee);
             animation: rotate 4s linear infinite;
         }
-        
+
         &::after {
             content: '';
             position: absolute;
@@ -795,10 +812,12 @@ footer .wave#wave4 {
             height: calc(100% - 12px);
         }
     }
+
     @keyframes rotate {
         0% {
             transform: rotate(0deg);
         }
+
         100% {
             transform: rotate(360deg);
         }
@@ -861,10 +880,12 @@ footer .wave#wave4 {
         margin-bottom: 30%;
     }
 
-    .input-box i, .text-area i {
+    .input-box i,
+    .text-area i {
         left: 4%;
         padding: 0;
     }
+
     footer {
         display: flex;
         justify-content: center;
@@ -895,12 +916,14 @@ footer .wave#wave4 {
 }
 
 .close-button>i {
-    font-size: 2.5rem;
+    font-size: 2rem;
     font-weight: 900;
 }
 
 .close-button {
-    float: right;
+    color: white;
+    background-color: transparent;
+    padding: 10px 20px 0px 0px;
 }
 
 iframe {
@@ -908,78 +931,73 @@ iframe {
     width: 100%;
 }
 
-.modal i{
-    font-size: 2.5rem;
-    font-weight: 900;
-}
 .modal {
     border: 0;
     box-shadow: 0 0 1.7em var(--main-color);
     position: fixed;
-    width: 50%;
-    height: 70%;
-    top: 13%;
-    left: 25%;
+    width: 80%;
+    height: 90%;
+    /* top: 13%;
+    left: 25%; */
+    margin: auto;
     border-radius: 6px;
     background-color: var(--second-bg-color);
     overflow: hidden;
-    
+    transition: all 5s ease-in-out;
+
     &>* {
         margin: 0 0 0.5rem 0;
     }
 }
-.modal-full{
+
+.modal-full {
     height: 100vh;
     width: 100vw;
     top: 0;
     right: 0;
     left: 0;
     bottom: 0;
-    #halfScreen{
+
+    #halfScreen {
         display: block;
     }
 
 }
-.modal .button{
-    margin:auto;
-    }
-.modal-full .close-button{
-    float: right;
-}
-.modal-full #fullScreen{
-        display: none;
-        justify-content: flex-start;
-}
-#halfScreen{
-    display: none;
-    justify-content: flex-start;
-}
-.button-container{
+
+.button-container {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: flex-end;
 }
 
 .modal::backdrop {
     background: linear-gradient(45deg, rgb(0, 204, 255), rgba(0, 255, 255, 0.324))
 }
 
-.input-box i, .text-area i {
+.input-box i,
+.text-area i {
     position: absolute;
     margin-top: 13px;
     font-size: 2.3rem;
-    padding-top: 8px ;
- }
- .input-box input, textarea{
+    padding-top: 8px;
+}
+
+.input-box input,
+textarea {
     text-indent: 15px;
- }
-#errors, #fix-errors, .bxs-error-circle{
+}
+
+#errors,
+#fix-errors,
+.bxs-error-circle {
     position: relative;
     font-size: 2rem;
     color: red;
 }
-.bx-check-circle{
+
+.bx-check-circle {
     color: rgb(17, 255, 17);
 }
-.yellow-error{
+
+.yellow-error {
     color: rgb(255, 221, 0);
 }
